@@ -4,12 +4,12 @@
   </div>
 </template>
 <script>
-import Cart from "@/components/Admin.vue";
+import Admin from "@/components/Admin.vue";
 
 export default {
   name: "AdminView",
   components: {
-    Cart,
+    Admin,
   },
 };
 </script>

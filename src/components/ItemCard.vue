@@ -7,16 +7,9 @@
     />
     <h5 class="text-black">{{ item.title }}</h5>
     <p class="text-secondary">
-      {{ item.location }}
+      {{ item.description }}
     </p>
     <p>{{ item.price }}</p>
-    <div class="d-flex flex-row justify-content-center">
-      <i class="fa-solid fa-bed me-2"></i>{{ item.bedrooms }}
-      <i class="fa-solid fa-shower me-2 ms-2"></i>{{ item.bathrooms }}
-      <i class="fa-solid fa-car me-2 ms-2"></i>{{ item.carspace }}
-      <i class="fa-solid fa-person me-2 ms-2"></i>{{ item.population }}
-    </div>
-    <p class="mt-2">{{ item.type }}</p>
   </div>
 </template>
 <script>
@@ -40,5 +33,20 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+#items {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+#boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: center;
+  flex-wrap: wrap;
 }
 </style>

@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "image": "",
+      "title": "vhbwehjbbje",
+      "description": "hbjnbajnfjkan",
+      "price": "R80"
+    },
+    {
+      "id": "2",
+      "image": "",
+      "title": "vhbwehjbbje",
+      "description": "hbjnbajnfjkan",
+      "price": "R90"
+    },
+    {
+      "id": "3",
+      "image": "",
+      "title": "vhbwehjbbje",
+      "description": "hbjnbajnfjkan",
+      "price": "R50"
+    }
+  ]
+}
