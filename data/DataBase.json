@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "name": "Chicken Sorentina",
+      "name": "Pasta Carbonnara",
       "price": "80",
       "catergory": "Main",
       "image": ""
@@ -69,6 +69,111 @@
       "price": "35",
       "catergory": "Drinks",
       "image": ""
+    },
+    {
+      "id": 11,
+      "name": "Deep-Fired Guacamole",
+      "price": "35",
+      "catergory": "Starter",
+      "image": "https://i.ibb.co/419YPMv/mex-starter.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Pajeon",
+      "price": "35",
+      "catergory": "Starter",
+      "image": "https://i.ibb.co/PYbtWtp/korean-starter.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Taneer Pakora",
+      "price": "35",
+      "catergory": "Starter",
+      "image": "https://i.ibb.co/Zhv1g4J/indian-starter.png"
+    },
+    {
+      "id": 14,
+      "name": "Bruschetta",
+      "price": "35",
+      "catergory": "Drinks",
+      "image": "https://i.ibb.co/C0bqm6T/italian-starter.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Mince Vetkoek",
+      "price": "35",
+      "catergory": "Starter",
+      "image": "https://i.ibb.co/DpkJhHX/SA-starter.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Spinach Enchilada ",
+      "price": "35",
+      "catergory": "Main",
+      "image": "https://i.ibb.co/SyctBpG/mex-main.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Dol Sot Bi Bim Bap",
+      "price": "35",
+      "catergory": "Main",
+      "image": "https://i.ibb.co/2gz1K7z/korean-main.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Butter Chicken",
+      "price": "35",
+      "catergory": "Main",
+      "image": "https://i.ibb.co/3RWyrgw/indian-main.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Lemon Chicken Piccata",
+      "price": "35",
+      "catergory": "Main",
+      "image": "https://i.ibb.co/V3KNpq4/italian-main.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Potjiekos",
+      "price": "35",
+      "catergory": "Main",
+      "image": "https://i.ibb.co/Y2HvMy8/SA-main.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Dulce De Leche",
+      "price": "35",
+      "catergory": "Dessert",
+      "image": "https://i.ibb.co/HNK0yDd/mex-dessert.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Bungeoppang",
+      "price": "35",
+      "catergory": "Dessert",
+      "image": "https://i.ibb.co/h2VGsKm/korean-dessert.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Kheer",
+      "price": "35",
+      "catergory": "Dessert",
+      "image": "https://i.ibb.co/k2PttDn/indian-dessert.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Tiramisu Cheesecake",
+      "price": "35",
+      "catergory": "Dessert",
+      "image": "https://i.ibb.co/j3GgbmT/italian-dessert.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Malva Pudding",
+      "price": "35",
+      "catergory": "Dessert",
+      "image": "https://i.ibb.co/yWb7W6T/SA-dessert.jpg"
     }
   ]
 }
