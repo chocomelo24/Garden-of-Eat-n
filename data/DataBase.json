@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Salad",
+      "price": "40",
+      "catergory": "Starter",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Nacho's",
+      "price": "55",
+      "catergory": "Starter",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "Chicken Sorentina",
+      "price": "80",
+      "catergory": "Main",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "Vegen Burger",
+      "price": "10",
+      "catergory": "Main",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "Waffle",
+      "price": "35",
+      "catergory": "Dessert",
+      "image": ""
+    },
+    {
+      "id": 6,
+      "name": "Milk Tart",
+      "price": "20",
+      "catergory": "Dessert",
+      "image": ""
+    },
+    {
+      "id": 7,
+      "name": "French Chips (Small)",
+      "price": "15",
+      "catergory": "Sides",
+      "image": ""
+    },
+    {
+      "id": 8,
+      "name": "Samoosa * 5",
+      "price": "20",
+      "catergory": "Sides",
+      "image": ""
+    },
+    {
+      "id": 9,
+      "name": "Soju 500ml",
+      "price": "50",
+      "catergory": "Drinks",
+      "image": ""
+    },
+    {
+      "id": 10,
+      "name": "Milkshake",
+      "price": "35",
+      "catergory": "Drinks",
+      "image": ""
+    }
+  ]
+}
