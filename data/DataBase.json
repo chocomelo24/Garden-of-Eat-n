@@ -5,70 +5,70 @@
       "name": "Salad",
       "price": "40",
       "catergory": "Starter",
-      "image": ""
+      "image": "https://i.ibb.co/v3P2mkc/nachos-starters.jpg"
     },
     {
       "id": 2,
       "name": "Nacho's",
       "price": "55",
       "catergory": "Starter",
-      "image": ""
+      "image": "https://i.ibb.co/0VR81wM/salad-starter.jpg"
     },
     {
       "id": 3,
-      "name": "Pasta Carbonnara",
+      "name": "Shrimp Carbonnara",
       "price": "80",
       "catergory": "Main",
-      "image": ""
+      "image": "https://i.ibb.co/pdQTsMX/shrimp-carbonara-main.jpg"
     },
     {
       "id": 4,
       "name": "Vegen Burger",
       "price": "10",
       "catergory": "Main",
-      "image": ""
+      "image": "https://i.ibb.co/KyKgPSX/vegan-burger-main.jpg"
     },
     {
       "id": 5,
       "name": "Waffle",
       "price": "35",
       "catergory": "Dessert",
-      "image": ""
+      "image": "https://i.ibb.co/ZXtJBDs/waffle.jpg"
     },
     {
       "id": 6,
       "name": "Milk Tart",
       "price": "20",
       "catergory": "Dessert",
-      "image": ""
+      "image": "https://i.ibb.co/yF9m2XW/milk-tart-dessert.jpg"
     },
     {
       "id": 7,
       "name": "French Chips (Small)",
       "price": "15",
       "catergory": "Sides",
-      "image": ""
+      "image": "https://i.ibb.co/JHP5wk4/french-fries.jpg"
     },
     {
       "id": 8,
       "name": "Samoosa * 5",
       "price": "20",
       "catergory": "Sides",
-      "image": ""
+      "image": "https://i.ibb.co/mGPvpvN/samoosas-side.jpg"
     },
     {
       "id": 9,
       "name": "Soju 500ml",
       "price": "50",
       "catergory": "Drinks",
-      "image": ""
+      "image": "https://i.ibb.co/cgmzLPT/soju.jpg"
     },
     {
       "id": 10,
       "name": "Milkshake",
       "price": "35",
       "catergory": "Drinks",
-      "image": ""
+      "image": "https://www.mashed.com/img/gallery/things-you-should-be-putting-in-your-milkshake-but-arent/intro-1653680339.jpg"
     },
     {
       "id": 11,
