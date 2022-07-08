@@ -19,12 +19,12 @@ const routes = [
   {
     path: "/cart",
     name: "Cart",
-    component: () => "../views/CartView.vue",
+    component: () => import("../views/CartView.vue"),
   },
   {
     path: "/admin",
     name: "Admin",
-    component: () => "../views/Admin.vue",
+    component: () => import("../views/AdminView.vue"),
   },
 ];
 
