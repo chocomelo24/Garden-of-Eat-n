@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "password": "password",
+      "email": "adams@gmail.com",
+      "full_name": "Ismaeel Adams"
+    }
+  ],
   "items": [
     {
       "id": 1,
