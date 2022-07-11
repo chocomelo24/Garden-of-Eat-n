@@ -37,140 +37,140 @@
       "name": "Salad",
       "price": "40",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/v3P2mkc/nachos-starters.jpg"
+      "image": ""
     },
     {
       "id": 2,
       "name": "Nacho's",
       "price": "55",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/0VR81wM/salad-starter.jpg"
+      "image": ""
     },
     {
       "id": 3,
       "name": "Shrimp Carbonnara",
       "price": "80",
       "catergory": "Main",
-      "image": "https://i.ibb.co/pdQTsMX/shrimp-carbonara-main.jpg"
+      "image": ""
     },
     {
       "id": 4,
       "name": "Vegen Burger",
       "price": "10",
       "catergory": "Main",
-      "image": "https://i.ibb.co/KyKgPSX/vegan-burger-main.jpg"
+      "image": ""
     },
     {
       "id": 5,
       "name": "Waffle",
       "price": "35",
       "catergory": "Dessert",
-      "image": "https://i.ibb.co/ZXtJBDs/waffle.jpg"
+      "image": ""
     },
     {
       "id": 6,
       "name": "Milk Tart",
       "price": "20",
       "catergory": "Dessert",
-      "image": "https://i.ibb.co/yF9m2XW/milk-tart-dessert.jpg"
+      "image": ""
     },
     {
       "id": 7,
       "name": "French Chips (Small)",
       "price": "15",
       "catergory": "Sides",
-      "image": "https://i.ibb.co/JHP5wk4/french-fries.jpg"
+      "image": ""
     },
     {
       "id": 8,
       "name": "Samoosa * 5",
       "price": "20",
       "catergory": "Sides",
-      "image": "https://i.ibb.co/mGPvpvN/samoosas-side.jpg"
+      "image": ""
     },
     {
       "id": 9,
       "name": "Soju 500ml",
       "price": "50",
       "catergory": "Drinks",
-      "image": "https://i.ibb.co/cgmzLPT/soju.jpg"
+      "image": ""
     },
     {
       "id": 10,
       "name": "Milkshake",
       "price": "35",
       "catergory": "Drinks",
-      "image": "https://www.mashed.com/img/gallery/things-you-should-be-putting-in-your-milkshake-but-arent/intro-1653680339.jpg"
+      "image": ""
     },
     {
       "id": 11,
       "name": "Deep-Fried Guacamole",
       "price": "35",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/419YPMv/mex-starter.jpg"
+      "image": ""
     },
     {
       "id": 12,
       "name": "Pajeon * 4",
       "price": "20",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/PYbtWtp/korean-starter.jpg"
+      "image": ""
     },
     {
       "id": 13,
       "name": "Taneer Pakora",
       "price": "40",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/Zhv1g4J/indian-starter.png"
+      "image": ""
     },
     {
       "id": 14,
       "name": "Bruschetta * 3",
       "price": "25",
       "catergory": "Drinks",
-      "image": "https://i.ibb.co/C0bqm6T/italian-starter.jpg"
+      "image": ""
     },
     {
       "id": 15,
       "name": "Mince Vetkoek * 3",
       "price": "50",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/DpkJhHX/SA-starter.jpg"
+      "image": ""
     },
     {
       "id": 16,
       "name": "Spinach Enchilada ",
       "price": "75",
       "catergory": "Main",
-      "image": "https://i.ibb.co/SyctBpG/mex-main.jpg"
+      "image": ""
     },
     {
       "id": 17,
       "name": "Dol Sot Bi Bim Bap",
       "price": "60",
       "catergory": "Main",
-      "image": "https://i.ibb.co/2gz1K7z/korean-main.jpg"
+      "image": ""
     },
     {
       "id": 18,
       "name": "Butter Chicken",
       "price": "80",
       "catergory": "Main",
-      "image": "https://i.ibb.co/3RWyrgw/indian-main.jpg"
+      "image": ""
     },
     {
       "id": 19,
       "name": "Lemon Chicken Piccata",
       "price": "70",
       "catergory": "Main",
-      "image": "https://i.ibb.co/V3KNpq4/italian-main.jpg"
+      "image": ""
     },
     {
       "id": 20,
       "name": "Potjiekos",
       "price": "65",
       "catergory": "Main",
-      "image": "https://i.ibb.co/Y2HvMy8/SA-main.jpg"
+      "image": ""
     },
     {
       "id": 21,
