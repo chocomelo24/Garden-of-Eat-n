@@ -1,10 +1,10 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  // State is where the data lives 
+  // State is where the data lives
   state: {
-    items: [],
-    users: [],
+    items: null,
+    users: null,
   },
   getters: {},
   // Mutations are used to update state
