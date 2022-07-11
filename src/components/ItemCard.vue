@@ -5,9 +5,9 @@
       class="car-img mb-4 img-fluid"
       alt="Picture of item"
     />
-    <h5 class="text-black">{{ item.title }}</h5>
+    <h5 class="text-black">{{ item.name }}</h5>
     <p class="text-secondary">
-      {{ item.description }}
+      {{ item.category }}
     </p>
     <p>{{ item.price }}</p>
   </div>
