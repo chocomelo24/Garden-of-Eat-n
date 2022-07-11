@@ -6,11 +6,11 @@
         <h5 class="”Removal”">Remove the rotten apples</h5>
       </div>
       <div class="”Cart-Items”">
-        <div class="”image-box”"><img src=”images/apple.png” /></div>
+        <div class="”image-box”"><img src="””" /></div>
         <div class="”about”">
           <h1 class="”title”">dd</h1>
           <h3 class="”subtitle”">2hfhf</h3>
-          <img src=”images/veg.png” />
+          <img src="””" />
         </div>
         <div class="”counter”"></div>
         <div class="”prices”"></div>
