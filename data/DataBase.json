@@ -2,9 +2,33 @@
   "users": [
     {
       "id": 1,
-      "password": "password",
-      "email": "adams@gmail.com",
-      "full_name": "Ismaeel Adams"
+      "full_name": "Mika John Rinquest",
+      "email": "mika@gmail.com",
+      "password": "dog"
+    },
+    {
+      "id": 2,
+      "full_name": "Isma'eel Adams",
+      "email": "mika@gmail.com",
+      "password": "dog"
+    },
+    {
+      "id": 3,
+      "full_name": "Chanique Chelsea Mansoor",
+      "email": "chanique@gmail.com",
+      "password": "dog"
+    },
+    {
+      "id": 4,
+      "full_name": "Tristan Chezlin Daniels",
+      "email": "tristan@gmail.com",
+      "password": "dog"
+    },
+    {
+      "id": 5,
+      "full_name": "Jason Wandrag",
+      "email": "jason@gmail.com",
+      "password": "cat"
     }
   ],
   "items": [
