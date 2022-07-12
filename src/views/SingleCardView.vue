@@ -1,18 +1,26 @@
 <template>
-  <div class="card shadow">
-    <router-link :to="{ name: 'SingleCardView', params: { id: item.id } }">
-      <img :src="item.image" class="car-img mb-2" alt="Picture of item" />
-    </router-link>
+  <div v-if="item" class="card shadow">
+    <img :src="item.image" class="car-img mb-2" alt="Picture of item" />
     <h5 class="text-black">{{ item.name }}</h5>
     <p class="text-secondary">
       {{ item.catergory }}
     </p>
     <p>R{{ item.price }}</p>
   </div>
+  <router-view />
 </template>
 <script>
 export default {
-  props: ["item"],
+  data() {
+    return {
+      item: null,
+    };
+  },
+  mounted() {
+    fetch("http://localhost:3000/items" + this.$route.params.id)
+      .then((res) => res.json())
+      .then((data) => (this.item = data));
+  },
 };
 </script>
 <style scoped>
@@ -41,7 +49,7 @@ export default {
 }
 .car-img {
   height: 275px;
-  width: 350px;
+  aspect-ratio: 1;
 }
 @media screen and (max-width: 800px) {
   .card {
