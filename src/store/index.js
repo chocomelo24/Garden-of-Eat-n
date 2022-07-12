@@ -8,8 +8,11 @@ export default createStore({
   },
   // Mutations are used to update state
   mutations: {
-    setUsers:(state, users) => {
+    setUsers: (state, users) => {
       state.users = users;
+    },
+    setItems: (state, items) => {
+      state.items = items;
     },
   },
   // Actions are for ASYNC / Fetch calls
