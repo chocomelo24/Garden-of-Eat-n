@@ -55,7 +55,7 @@
     },
     {
       "id": 4,
-      "name": "Vegen Burger",
+      "name": "Vegan Burger",
       "price": "10",
       "catergory": "Main",
       "image": "https://i.ibb.co/KyKgPSX/vegan-burger-main.jpg"
@@ -83,7 +83,7 @@
     },
     {
       "id": 8,
-      "name": "Samoosa * 5",
+      "name": "Samoosa (5)",
       "price": "20",
       "catergory": "Sides",
       "image": "https://i.ibb.co/mGPvpvN/samoosas-side.jpg"
@@ -111,7 +111,7 @@
     },
     {
       "id": 12,
-      "name": "Pajeon * 4",
+      "name": "Pajeon (4)",
       "price": "20",
       "catergory": "Starter",
       "image": "https://i.ibb.co/PYbtWtp/korean-starter.jpg"
