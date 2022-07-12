@@ -37,14 +37,14 @@
       "name": "Salad",
       "price": "40",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/v3P2mkc/nachos-starters.jpg"
+      "image": "https://i.ibb.co/0VR81wM/salad-starter.jpg"
     },
     {
       "id": 2,
       "name": "Nacho's",
       "price": "55",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/0VR81wM/salad-starter.jpg"
+      "image": "https://i.ibb.co/v3P2mkc/nachos-starters.jpg"
     },
     {
       "id": 3,
@@ -83,7 +83,7 @@
     },
     {
       "id": 8,
-      "name": "Samoosa *5",
+      "name": "Samoosa (5)",
       "price": "20",
       "catergory": "Sides",
       "image": "https://i.ibb.co/mGPvpvN/samoosas-side.jpg"
@@ -111,7 +111,7 @@
     },
     {
       "id": 12,
-      "name": "Pajeon *4",
+      "name": "Pajeon (4)",
       "price": "20",
       "catergory": "Starter",
       "image": "https://i.ibb.co/PYbtWtp/korean-starter.jpg"
@@ -125,14 +125,14 @@
     },
     {
       "id": 14,
-      "name": "Bruschetta * 3",
+      "name": "Bruschetta (3)",
       "price": "25",
       "catergory": "Drinks",
       "image": "https://i.ibb.co/C0bqm6T/italian-starter.jpg"
     },
     {
       "id": 15,
-      "name": "Mince Vetkoek * 3",
+      "name": "Mince Vetkoek (3)",
       "price": "50",
       "catergory": "Starter",
       "image": "https://i.ibb.co/DpkJhHX/SA-starter.jpg"
