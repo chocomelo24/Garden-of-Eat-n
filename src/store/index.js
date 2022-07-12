@@ -18,9 +18,10 @@ export default createStore({
   // Actions are for ASYNC / Fetch calls
   actions: {
     getItems: async (context) => {
+      //async (context) must ALWAYS be in
       fetch("http://localhost:3000/items")
         .then((res) => res.json())
-        .then((items) => context.commit("setItems", items));
+        .then((items) => context.commit("setItems", items)); //sends the changes to the array
 
       /* How to get the fetch data in the components
       <div>
