@@ -6,10 +6,8 @@ export default createStore({
     items: null,
     users: null,
   },
-  getters: {},
   // Mutations are used to update state
   mutations: {},
   // Actions are for ASYNC / Fetch calls
   actions: {},
-  modules: {},
 });
