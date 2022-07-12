@@ -5,6 +5,7 @@ export default createStore({
   state: {
     items: null,
     users: null,
+    singleItem: null,
   },
   // Mutations are used to update state
   mutations: {
@@ -13,6 +14,9 @@ export default createStore({
     },
     setItems: (state, items) => {
       state.items = items;
+    },
+    setSingleItem: (state, item) => {
+      state.item = item;
     },
   },
   // Actions are for ASYNC / Fetch calls
@@ -60,6 +64,11 @@ export default createStore({
           if (data.length) return (this.user = data[0]);
           alert("No user found, please register");
         });
+    },
+    getSingleItem: async (context) => {
+      fetch("http://localhost:3000/items/id")
+        .then((res) => res.json())
+        .then((items) => context.commit("setSingleItems", item));
     },
   },
 });
