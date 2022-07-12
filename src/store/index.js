@@ -21,11 +21,22 @@ export default createStore({
   },
   // Actions are for ASYNC / Fetch calls
   actions: {
+    login: async (context, payload) => {
+      const { email, password } = payload;
+      const response = await fetch(
+        `http://localhost:3000/users?email=${email}&password=${password}`
+      );
+      const userData = await response.json();
+      context.commit("setUser", userData[0]);
+    },
+
     getItems: async (context) => {
       //async (context) must ALWAYS be in
       fetch("http://localhost:3000/items")
         .then((res) => res.json())
-        .then((items) => context.commit("setItems", items)); //sends the changes to the array
+        .then((items) => {
+          context.commit("setItems", items);
+        }); //sends the changes to the array
 
       /* How to get the fetch data in the components
       <div>
@@ -55,20 +66,44 @@ export default createStore({
       </script>
       */
     },
-    getUsers: async (context) => {
-      fetch(
-        `http://localhost:3000/users?email=${this.email}&password=${this.password}`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.length) return (this.user = data[0]);
-          alert("No user found, please register");
-        });
-    },
+
     getSingleItem: async (context, id) => {
       fetch("http://localhost:3000/items/" + id)
         .then((res) => res.json())
-        .then((items) => context.commit("setSingleItems", item));
+        .then((item) => context.commit("setSingleItems", item));
+    },
+    createItem: async (context, item) => {
+      fetch("http://localhost:3000/items/", {
+        method: "POST",
+        body: JSON.stringify(item),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then(() => {
+          context.dispatch("getItems", item);
+        });
+    },
+    editItem: async (context, item) => {
+      fetch("http://localhost:3000/items/" + id, {
+        method: "PUT",
+        body: JSON.stringify(item),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then(() => {
+          context.dispatch("getItems", item);
+        });
+    },
+    deleteItem: async (context, id) => {
+      fetch("http://localhost:3000/items/" + id, {
+        method: "DELETE",
+      }).then(() => {
+        context.dispatch("getItems");
+      });
     },
   },
 });
