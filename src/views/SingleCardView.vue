@@ -1,11 +1,13 @@
 <template>
-  <div v-if="item" class="card shadow">
-    <img :src="item.image" class="car-img mb-2" alt="Picture of item" />
-    <h5 class="text-black">{{ item.name }}</h5>
-    <p class="text-secondary">
-      {{ item.catergory }}
-    </p>
-    <p>R{{ item.price }}</p>
+  <div v-if="item" class="container">
+    <div class="card shadow">
+      <img :src="item.image" class="car-img mb-2" alt="Picture of item" />
+      <h5 class="text-black">{{ item.name }}</h5>
+      <p class="text-secondary">
+        {{ item.catergory }}
+      </p>
+      <p>R{{ item.price }}</p>
+    </div>
   </div>
   <router-view />
 </template>
@@ -17,13 +19,21 @@ export default {
     };
   },
   mounted() {
-    fetch("http://localhost:3000/items" + this.$route.params.id)
+    fetch("http://localhost:3000/items/" + this.$route.params.id)
       .then((res) => res.json())
-      .then((data) => (this.item = data));
+      .then((data) => {
+        this.item = data;
+      });
   },
 };
 </script>
 <style scoped>
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
   color: black;
   width: 30%;
