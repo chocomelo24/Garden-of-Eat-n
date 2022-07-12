@@ -1,15 +1,11 @@
 <template>
-  <div class="card shadow mb-4">
-    <img
-      :src="item.image"
-      class="car-img mb-4 img-fluid"
-      alt="Picture of item"
-    />
+  <div class="card shadow">
+    <img :src="item.image" class="car-img mb-2" alt="Picture of item" />
     <h5 class="text-black">{{ item.name }}</h5>
     <p class="text-secondary">
-      {{ item.category }}
+      {{ item.catergory }}
     </p>
-    <p>{{ item.price }}</p>
+    <p>R{{ item.price }}</p>
   </div>
 </template>
 <script>
@@ -24,7 +20,6 @@ export default {
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  box-shadow: 1px 1px 8px black;
   text-align: center;
 }
 
@@ -42,11 +37,13 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-#boxes {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  text-align: center;
-  flex-wrap: wrap;
+.car-img {
+  height: 275px;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
 </style>

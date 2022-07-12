@@ -22,3 +22,20 @@ export default {
   },
 };
 </script>
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 800px) {
+  .property-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>

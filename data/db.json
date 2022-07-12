@@ -37,14 +37,14 @@
       "name": "Salad",
       "price": "40",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/v3P2mkc/nachos-starters.jpg"
+      "image": "https://i.ibb.co/0VR81wM/salad-starter.jpg"
     },
     {
       "id": 2,
       "name": "Nacho's",
       "price": "55",
       "catergory": "Starter",
-      "image": "https://i.ibb.co/0VR81wM/salad-starter.jpg"
+      "image": "https://i.ibb.co/v3P2mkc/nachos-starters.jpg"
     },
     {
       "id": 3,
