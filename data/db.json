@@ -206,6 +206,13 @@
       "price": "60",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/yWb7W6T/SA-dessert.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Apple Pie",
+      "price": "45",
+      "catergory": "Dessert",
+      "image": "https://i.ibb.co/9t3DH99/applepie.jpg"
     }
   ]
 }

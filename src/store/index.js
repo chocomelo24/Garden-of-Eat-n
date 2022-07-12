@@ -16,7 +16,7 @@ export default createStore({
       state.items = items;
     },
     setSingleItem: (state, item) => {
-      state.item = item;
+      state.singleItem = item;
     },
   },
   // Actions are for ASYNC / Fetch calls
@@ -65,8 +65,8 @@ export default createStore({
           alert("No user found, please register");
         });
     },
-    getSingleItem: async (context) => {
-      fetch("http://localhost:3000/items/id")
+    getSingleItem: async (context, id) => {
+      fetch("http://localhost:3000/items/" + id)
         .then((res) => res.json())
         .then((items) => context.commit("setSingleItems", item));
     },
