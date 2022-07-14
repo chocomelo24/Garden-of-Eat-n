@@ -8,11 +8,16 @@
       {{ item.catergory }}
     </p>
     <p>R{{ item.price }}</p>
+    <button class="btn-area" >
+      <i class="fa fa-trash"></i>
+      <span class="btn2">Add</span>
+    </button>
   </div>
 </template>
 <script>
 export default {
   props: ["item"],
+  
 };
 </script>
 <style scoped>

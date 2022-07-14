@@ -10,10 +10,10 @@
               <h3></h3>
               <h4>Price:R</h4>
               <p class="unit">Quantity:<input value="2" /></p>
-              <p class="btn-area">
+              <button class="btn-area" v-on:click="delitem(id)">
                 <i class="fa fa-trash"></i>
                 <span class="btn2">Remove</span>
-              </p>
+              </button>
             </div>
           </div>
         </div>
@@ -29,6 +29,11 @@
 </template>
 <script>
 export default {};
+// methods: {
+//    delitem(id) {
+//     return this.$store.dispatch("", id)
+//   }
+// }
 </script>
 <style scoped>
 * {
