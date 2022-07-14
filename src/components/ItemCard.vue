@@ -23,8 +23,11 @@ export default {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  transition: all 0.6s ease;
 }
-
+.card:hover {
+  transform: scale(1.02);
+}
 .card p {
   font-family: sans-serif;
   display: flex;
