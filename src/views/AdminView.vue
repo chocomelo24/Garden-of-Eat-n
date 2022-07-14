@@ -9,16 +9,5 @@ export default {
   components: {
     Admin,
   },
-  data() {
-    return {
-      items: [],
-    };
-  },
-  mounted() {
-    fetch("http://localhost:3000/items")
-      .then((res) => res.json())
-      .then((data) => (this.items = data))
-      .catch((err) => console.log(err.message));
-  },
 };
 </script>

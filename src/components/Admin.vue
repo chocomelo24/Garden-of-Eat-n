@@ -1,6 +1,8 @@
 <template>
   <!-- "!== null is" is not necessary, but is good practice as it adds extra security to the function working properly -->
+  <!-- If there is user is not null, display this -->
   <div v-if="User !== null">
+    <!-- If there is user is not null, display this -->
     Welcome {{ User.full_name }}
     <table class="table">
       <thead>
@@ -15,18 +17,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <!-- <th scope="row">{{ item.id }}</th>
+        <tr v-for="item in items" :key="item.id">
+          <td scope="row">{{ item.id }}</td>
           <td><img :src="item.image" /></td>
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
           <td>{{ item.price }}</td>
           <td>{{ item.category }}</td>
-          <td>{{ item.image }}</td> -->
+          <td>{{ item.image }}</td>
         </tr>
       </tbody>
     </table>
-    <!-- If there is user is not null, display this -->
   </div>
   <div v-else>
     <!-- If there is user is null, display this -->
@@ -66,18 +67,21 @@ export default {
       psw: "", //This makes the default input an empty string
     };
   },
+
   computed: {
     User() {
       return store.state.user; //Pulls the array from the store
     },
-    item() {
-      return this.$store.state.item;
+    items() {
+      return this.$store.state.items;
     },
   },
 
   mounted() {
-    this.$store.dispatch("getUser", this.id);
+    this.$store.dispatch("getUser");
+    this.$store.dispatch("getItems");
   },
+
   methods: {
     login() {
       store.dispatch(

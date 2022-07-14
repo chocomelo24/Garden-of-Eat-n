@@ -92,7 +92,7 @@ export default createStore({
     getUser: async (context) => {
       fetch("http://localhost:3000/users")
         .then((res) => res.json())
-        .then((item) => context.commit("setUser", user));
+        .then((user) => context.commit("setUser", user));
     },
 
     getSingleItem: async (context, id) => {
