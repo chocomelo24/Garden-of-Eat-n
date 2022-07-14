@@ -36,6 +36,7 @@
       "id": 1,
       "name": "Salad",
       "price": "40",
+      "descriptions":"Lovely noodle salad with fresh veggies all tossed together for your liking.",
       "catergory": "Starter",
       "image": "https://i.ibb.co/0VR81wM/salad-starter.jpg"
     },
@@ -43,6 +44,7 @@
       "id": 2,
       "name": "Nacho's",
       "price": "55",
+      "descriptions":"A tortilla chip topped with melted cheese and hot pepper or refried beans.",
       "catergory": "Starter",
       "image": "https://i.ibb.co/v3P2mkc/nachos-starters.jpg"
     },
@@ -50,6 +52,7 @@
       "id": 3,
       "name": "Shrimp Carbonnara",
       "price": "80",
+      "descriptions":"An Italian pasta dish from Rome made with eggs,hard cheese,shrimp and black pepper.",
       "catergory": "Main",
       "image": "https://i.ibb.co/pdQTsMX/shrimp-carbonara-main.jpg"
     },
@@ -57,6 +60,7 @@
       "id": 4,
       "name": "Vegan Burger",
       "price": "60",
+      "descriptions":"This veggie burger has an amazing meaty texture and savory,smoky flavour,fit in a bun with fancy fixings or with good old ketchup and mustard.",
       "catergory": "Main",
       "image": "https://i.ibb.co/KyKgPSX/vegan-burger-main.jpg"
     },
@@ -64,6 +68,7 @@
       "id": 5,
       "name": "Waffle",
       "price": "35",
+      "descriptions":"Delicious waffles topped with yummy,sticky syrup and ice-cream.",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/ZXtJBDs/waffle.jpg"
     },
@@ -71,6 +76,7 @@
       "id": 6,
       "name": "Milk Tart",
       "price": "20",
+      "descriptions":"Traditional South African milk tart with a homemade crust, and a silky smooth filling, baked to perfection and sprinkled with ground cinnamon.",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/yF9m2XW/milk-tart-dessert.jpg"
     },
@@ -78,6 +84,7 @@
       "id": 7,
       "name": "French Chips (Small)",
       "price": "15",
+      "descriptions":"Fried sliced potatoes with seasoning and sauce of your desire.",
       "catergory": "Sides",
       "image": "https://i.ibb.co/JHP5wk4/french-fries.jpg"
     },
@@ -85,6 +92,7 @@
       "id": 8,
       "name": "Samoosa (5)",
       "price": "20",
+      "descriptions":"Baked pastry with a savory filling.",
       "catergory": "Sides",
       "image": "https://i.ibb.co/mGPvpvN/samoosas-side.jpg"
     },
@@ -92,6 +100,7 @@
       "id": 9,
       "name": "Soju 500ml",
       "price": "50",
+      "descriptions":"Traditional korean beer made from rice.",
       "catergory": "Drinks",
       "image": "https://i.ibb.co/cgmzLPT/soju.jpg"
     },
@@ -99,6 +108,7 @@
       "id": 10,
       "name": "Milkshake",
       "price": "35",
+      "descriptions":"Sweet beverage made by blending milk, ice cream, and flavorings or sweeteners such as butterscotch, caramel sauce, chocolate syrup, fruit syrup, or whole fruit into a thick, sweet, cold mixture.",
       "catergory": "Drinks",
       "image": "https://www.mashed.com/img/gallery/things-you-should-be-putting-in-your-milkshake-but-arent/intro-1653680339.jpg"
     },
@@ -106,6 +116,7 @@
       "id": 11,
       "name": "Deep-Fried Guacamole",
       "price": "35",
+      "descriptions":"Corn chip coated guac bites served with squeezed lime.",
       "catergory": "Starter",
       "image": "https://i.ibb.co/419YPMv/mex-starter.jpg"
     },
@@ -113,13 +124,15 @@
       "id": 12,
       "name": "Pajeon (4)",
       "price": "20",
+      "descriptions":"Pan-fried korean scallion pancakes.",
       "catergory": "Starter",
       "image": "https://i.ibb.co/PYbtWtp/korean-starter.jpg"
     },
     {
       "id": 13,
-      "name": "Taneer Pakora",
+      "name": "Paneer Pakora",
       "price": "40",
+      "descriptions":"Delicious Indian snack made with paneer, spice and gram flour.",
       "catergory": "Starter",
       "image": "https://i.ibb.co/Zhv1g4J/indian-starter.png"
     },
@@ -127,6 +140,7 @@
       "id": 14,
       "name": "Bruschetta (3)",
       "price": "25",
+      "descriptions":"Toasted bread, topped with tomatoes, parmesan cheese, garlic, and fresh basil.",
       "catergory": "Drinks",
       "image": "https://i.ibb.co/C0bqm6T/italian-starter.jpg"
     },
@@ -134,6 +148,7 @@
       "id": 15,
       "name": "Mince Vetkoek (3)",
       "price": "50",
+      "descriptions":"A delicious beef mince curry served with the good old South African favourite – Magwinya - a bread dough shaped into balls and deep-fried to perfection.",
       "catergory": "Starter",
       "image": "https://i.ibb.co/DpkJhHX/SA-starter.jpg"
     },
@@ -141,6 +156,7 @@
       "id": 16,
       "name": "Spinach Enchilada ",
       "price": "75",
+      "descriptions":"These Spinach Enchiladas are covered in a red enchilada sauce and stuffed with spinach, mushrooms and onions for a tasty Mexican dish.",
       "catergory": "Main",
       "image": "https://i.ibb.co/SyctBpG/mex-main.jpg"
     },
@@ -148,6 +164,7 @@
       "id": 17,
       "name": "Dol Sot Bi Bim Bap",
       "price": "60",
+      "descriptions":"Bibimbap (비빔밥) is Korean mixed rice. It includes rice, your choice of Korean side dishes and the bibimbap sauce. Served in a (mixing) bowl or in a hot stone bowl. Mix them all together nicely and shove them into your mouth",
       "catergory": "Main",
       "image": "https://i.ibb.co/2gz1K7z/korean-main.jpg"
     },
@@ -155,6 +172,7 @@
       "id": 18,
       "name": "Butter Chicken",
       "price": "80",
+      "descriptions":"Aromatic golden chicken pieces in an incredible creamy curry sauce.",
       "catergory": "Main",
       "image": "https://i.ibb.co/3RWyrgw/indian-main.jpg"
     },
@@ -162,6 +180,7 @@
       "id": 19,
       "name": "Lemon Chicken Piccata",
       "price": "70",
+      "descriptions":"Tender breaded chicken in a creamy lemon sauce that the entire family will love!",
       "catergory": "Main",
       "image": "https://i.ibb.co/V3KNpq4/italian-main.jpg"
     },
@@ -169,6 +188,7 @@
       "id": 20,
       "name": "Potjiekos",
       "price": "65",
+      "descriptions":"South African lamb stew made on the flames to keep you warm.",
       "catergory": "Main",
       "image": "https://i.ibb.co/Y2HvMy8/SA-main.jpg"
     },
@@ -176,6 +196,7 @@
       "id": 21,
       "name": "Dulce De Leche",
       "price": "55",
+      "descriptions":"Confection of sweet milk cooked down until it's the color and consistency of caramel sauce or butterscotch",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/HNK0yDd/mex-dessert.jpg"
     },
@@ -183,6 +204,7 @@
       "id": 22,
       "name": "Bungeoppang",
       "price": "69",
+      "descriptions":"Bungeo means crucian carp and Ppang means bread in Korean, so the dessert is simply named after what it is and looks like,filled with chocolate and ice-cream.",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/h2VGsKm/korean-dessert.jpg"
     },
@@ -190,6 +212,7 @@
       "id": 23,
       "name": "Kheer",
       "price": "45",
+      "descriptions":"This traditional Indian rice pudding made with basmati rice, whole milk, sugar, nuts, saffron and cardamom is slow-cooked to perfection making for a rich, creamy kheer.",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/k2PttDn/indian-dessert.jpg"
     },
@@ -197,6 +220,7 @@
       "id": 24,
       "name": "Tiramisu Cheesecake",
       "price": "60",
+      "descriptions":"Yummy! creamy cheesecake, a slice of happiness.",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/j3GgbmT/italian-dessert.jpg"
     },
@@ -204,6 +228,7 @@
       "id": 25,
       "name": "Malva Pudding",
       "price": "60",
+      "descriptions":"Sweet and moist cake recipe straight from South Africa made with incredible apricot jam and heavy custard.",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/yWb7W6T/SA-dessert.jpg"
     },
@@ -211,6 +236,7 @@
       "id": 26,
       "name": "Apple Pie",
       "price": "45",
+      "descriptions":"Perfectly cooked (not mushy) apples surrounded by a thickened and gently spiced sauce all baked inside a flaky, golden-brown crust.",
       "catergory": "Dessert",
       "image": "https://i.ibb.co/9t3DH99/applepie.jpg"
     }
