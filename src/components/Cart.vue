@@ -65,13 +65,8 @@ body {
   overflow: hidden;
   margin-bottom: 20px;
   background: white;
-  transition: all 0.6s ease;
   box-shadow: #42b983 (100, 100, 111, 0.2) 0.7px 29px 0;
 }
-.box:hover {
-  transform: scale(1.02);
-}
-
 .box img {
   width: 300px;
   height: 200px;
