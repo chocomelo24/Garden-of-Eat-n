@@ -1,4 +1,5 @@
 <template>
+  <button @click="sortByPrice">Sort By Price</button>
   <div v-if="items" class="container d-flex flex-row gap-5">
     <ItemCard v-for="item in items" :key="item.id" :item="item" />
   </div>
@@ -16,6 +17,11 @@ export default {
   computed: {
     items() {
       return this.$store.state.items;
+    },
+  },
+  methods: {
+    sortByPrice() {
+      this.$store.commit("sortByPrice");
     },
   },
 };

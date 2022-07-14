@@ -6,7 +6,9 @@ export default createStore({
   state: {
     //Best to for the data name to be a single version of the array (properties = property)
     item: null,
+    items: null,
     user: null,
+    asc: true,
   },
   // Mutations are used to update state
   mutations: {
@@ -18,6 +20,16 @@ export default createStore({
     },
     setUser: (state, user) => {
       state.user = user;
+    },
+
+    sortByPrice: (state) => {
+      state.items.sort((a, b) => {
+        return a.price - b.price;
+      });
+      if (!state.asc) {
+        state.items.reverse();
+      }
+      state.asc = !state.asc;
     },
   },
   // Actions are for ASYNC / Fetch calls

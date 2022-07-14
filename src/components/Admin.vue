@@ -2,7 +2,6 @@
   <!-- "!== null is" is not necessary, but is good practice as it adds extra security to the function working properly -->
   <div v-if="User !== null">
     <!-- If there is user is not null, display this -->
-    {{ User }}
   </div>
   <div v-else>
     <!-- If there is user is null, display this -->
