@@ -2,7 +2,30 @@
   <!-- "!== null is" is not necessary, but is good practice as it adds extra security to the function working properly -->
   <div v-if="User !== null">
     <!-- If there is user is not null, display this -->
-    {{ User }}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Image</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Category</th>
+          <th scope="col">Img URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <th scope="row">{{ item.id }}</th>
+          <td><img :src="item.image" /></td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.category }}</td>
+          <td>{{ item.image }}</td> -->
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div v-else>
     <!-- If there is user is null, display this -->
@@ -28,34 +51,10 @@
           v-model="psw"
         />
 
-      <button type="submit">Login</button>
-    </div>
-  </form>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Image</th>
-        <th scope="col">Name</th>
-        <th scope="col">Description</th>
-        <th scope="col">Price</th>
-        <th scope="col">Category</th>
-        <th scope="col">Img URL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <!-- <th scope="row">{{ item.id }}</th>
-        <td><img :src="item.image" /></td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.description }}</td>
-        <td>{{ item.price }}</td>
-        <td>{{ item.category }}</td>
-        <td>{{ item.image }}</td> -->
-      </tr>
-    </tbody>
-  </table>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
 </template>
 <script>
 import store from "@/store";
