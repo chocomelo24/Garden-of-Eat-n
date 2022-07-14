@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-flex flex-row gap-5">
+  <div v-if="items" class="container d-flex flex-row gap-5">
     <ItemCard v-for="item in items" :key="item.id" :item="item" />
   </div>
 </template>
@@ -9,16 +9,14 @@ export default {
   components: {
     ItemCard,
   },
-  data() {
-    return {
-      items: [],
-    };
-  },
+
   mounted() {
-    fetch("http://localhost:3000/items")
-      .then((res) => res.json())
-      .then((data) => (this.items = data))
-      .catch((err) => console.log(err.message));
+    this.$store.dispatch("getItems");
+  },
+  computed: {
+    items() {
+      return this.$store.state.items;
+    },
   },
 };
 </script>

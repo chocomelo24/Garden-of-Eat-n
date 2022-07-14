@@ -3,20 +3,17 @@ import { createStore } from "vuex";
 export default createStore({
   // State is where the data lives
   state: {
-    items: null,
-    users: null,
-    singleItem: null,
+    //Best to for the data name to be a single version of the array (properties = property)
+    item: null,
+    user: null,
   },
   // Mutations are used to update state
   mutations: {
-    setUsers: (state, users) => {
-      state.users = users;
-    },
     setItems: (state, items) => {
       state.items = items;
     },
     setSingleItem: (state, item) => {
-      state.singleItem = item;
+      state.item = item;
     },
   },
   // Actions are for ASYNC / Fetch calls
@@ -70,7 +67,7 @@ export default createStore({
     getSingleItem: async (context, id) => {
       fetch("http://localhost:3000/items/" + id)
         .then((res) => res.json())
-        .then((item) => context.commit("setSingleItems", item));
+        .then((item) => context.commit("setSingleItem", item));
     },
     createItem: async (context, item) => {
       fetch("http://localhost:3000/items/", {

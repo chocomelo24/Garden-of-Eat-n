@@ -9,21 +9,17 @@
       <p>R{{ item.price }}</p>
     </div>
   </div>
-  <router-view />
 </template>
 <script>
 export default {
-  data() {
-    return {
-      item: null,
-    };
+  props: ["id"],
+  computed: {
+    item() {
+      return this.$store.state.item;
+    },
   },
   mounted() {
-    fetch("http://localhost:3000/items/" + this.$route.params.id)
-      .then((res) => res.json())
-      .then((data) => {
-        this.item = data;
-      });
+    this.$store.dispatch("getSingleItem", this.id);
   },
 };
 </script>
@@ -32,6 +28,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .card {
@@ -40,7 +41,6 @@ export default {
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  text-align: center;
 }
 
 .card p {
