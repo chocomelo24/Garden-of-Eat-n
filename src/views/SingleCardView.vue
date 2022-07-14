@@ -6,6 +6,7 @@
       <p class="text-secondary">
         {{ item.catergory }}
       </p>
+      <p>{{ item.description }}</p>
       <p>R{{ item.price }}</p>
       <!-- <input type="number" placeholder="qty" v-model="qty" /> -->
       <button @click="addToCart(item)" class="btn-area">

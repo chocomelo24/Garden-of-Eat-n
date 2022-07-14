@@ -1,3 +1,4 @@
+import router from "@/router";
 import { createStore } from "vuex";
 
 export default createStore({
@@ -7,6 +8,10 @@ export default createStore({
     items: null,
     user: null,
     cart: [],
+    item: null,
+    items: null,
+    user: null,
+    asc: true,
   },
   // Mutations are used to update state
   mutations: {
@@ -18,18 +23,40 @@ export default createStore({
     },
     updateCart: (state, item) => {
       state.cart.push(item);
+    setUser: (state, user) => {
+      state.user = user;
+    },
+
+    sortByPrice: (state) => {
+      state.items.sort((a, b) => {
+        return a.price - b.price; //like vanilla javascript, this is how you make a sort function
+      });
+      if (!state.asc) {
+        //if the asc is not true, it reverses the current order of the list
+        state.items.reverse(); // reverts the order
+      }
+      state.asc = !state.asc; //states that when the function is run, asc becomes false instead of true
     },
   },
   // Actions are for ASYNC / Fetch calls
   actions: {
-    // login () {
-    //   const { email, password } = payload;
-    //   const response = await fetch(
-    //     `http://localhost:3000/users?email=${email}&password=${password}`
-    //   );
-    //   const userData = await response.json();
-    //   context.commit("setUser", userData[0]);
-    // },
+    login: async (context, payload) => {
+      const { email, password } = payload;
+      const response = await fetch(
+        `http://localhost:3000/users?email=${email}&password=${password}` //the ${} is tha payload, and will compare the inputs to the original array
+      );
+      const userData = await response.json();
+      if (!userData.length) return alert("No user found with these details"); //Lets the user know that if the information put inside does not match the array, an alert will appear
+      context.commit("setUser", userData[0]);
+
+      // const isAdmin = userData[0].isAdmin;
+      // if (isAdmin === true) {
+      //   // router.push('')
+      // } else {
+      //   router.push("/");
+      // }
+      // console.log(userData);
+    },
 
     getItems: async (context) => {
       //async (context) must ALWAYS be in
@@ -67,12 +94,18 @@ export default createStore({
       </script>
       */
     },
+    getUser: async (context) => {
+      fetch("http://localhost:3000/users")
+        .then((res) => res.json())
+        .then((user) => context.commit("setUser", user));
+    },
 
     getSingleItem: async (context, id) => {
       fetch("http://localhost:3000/items/" + id)
         .then((res) => res.json())
         .then((item) => context.commit("setSingleItem", item));
     },
+
     createItem: async (context, item) => {
       fetch("http://localhost:3000/items/", {
         method: "POST",
@@ -86,6 +119,7 @@ export default createStore({
           context.dispatch("getItems", item);
         });
     },
+
     editItem: async (context, item) => {
       fetch("http://localhost:3000/items/" + id, {
         method: "PUT",
@@ -99,6 +133,7 @@ export default createStore({
           context.dispatch("getItems", item);
         });
     },
+
     deleteItem: async (context, id) => {
       fetch("http://localhost:3000/items/" + id, {
         method: "DELETE",

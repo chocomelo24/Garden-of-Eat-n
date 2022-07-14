@@ -1,4 +1,5 @@
 <template>
+  <button class="btn mb-3 btn-sm" @click="sortByPrice">Sort By Price</button>
   <div v-if="items" class="container d-flex flex-row gap-5">
     <ItemCard v-for="item in items" :key="item.id" :item="item" />
   </div>
@@ -18,6 +19,12 @@ export default {
       return this.$store.state.items;
     },
   },
+  methods: {
+    sortByPrice() {
+      //gives function a name (does not need to be the same as the name given in the store)
+      this.$store.commit("sortByPrice"); //runs the function in the store
+    },
+  },
 };
 </script>
 <style scoped>
@@ -35,5 +42,8 @@ export default {
     flex-direction: column;
     text-align: center;
   }
+}
+.btn {
+  width: 150px;
 }
 </style>

@@ -10,6 +10,7 @@
         {{ item.catergory }}
       </p>
       <p>R{{ item.price }}</p>
+      <h5 class="text-black mb-3">{{ item.name }}</h5>
     </div>
   </router-link>
 </template>
