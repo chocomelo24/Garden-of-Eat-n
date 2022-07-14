@@ -214,5 +214,13 @@
       "catergory": "Dessert",
       "image": "https://i.ibb.co/9t3DH99/applepie.jpg"
     }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "productID": 1,
+      "userID": 2,
+      "qty": 2
+    }
   ]
 }

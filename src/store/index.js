@@ -4,8 +4,9 @@ export default createStore({
   // State is where the data lives
   state: {
     //Best to for the data name to be a single version of the array (properties = property)
-    item: null,
+    items: null,
     user: null,
+    cart: [],
   },
   // Mutations are used to update state
   mutations: {
@@ -15,17 +16,20 @@ export default createStore({
     setSingleItem: (state, item) => {
       state.item = item;
     },
+    updateCart: (state, item) => {
+      state.cart.push(item);
+    },
   },
   // Actions are for ASYNC / Fetch calls
   actions: {
-    login: async (context, payload) => {
-      const { email, password } = payload;
-      const response = await fetch(
-        `http://localhost:3000/users?email=${email}&password=${password}`
-      );
-      const userData = await response.json();
-      context.commit("setUser", userData[0]);
-    },
+    // login () {
+    //   const { email, password } = payload;
+    //   const response = await fetch(
+    //     `http://localhost:3000/users?email=${email}&password=${password}`
+    //   );
+    //   const userData = await response.json();
+    //   context.commit("setUser", userData[0]);
+    // },
 
     getItems: async (context) => {
       //async (context) must ALWAYS be in
@@ -101,6 +105,10 @@ export default createStore({
       }).then(() => {
         context.dispatch("getItems");
       });
+    },
+    addToCart: async (context, id) => {
+      this.state.cart.item.push(id);
+      context.dispatch("updateCart", this.state.cart);
     },
   },
 });

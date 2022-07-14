@@ -7,6 +7,11 @@
         {{ item.catergory }}
       </p>
       <p>R{{ item.price }}</p>
+      <!-- <input type="number" placeholder="qty" v-model="qty" /> -->
+      <button @click="addToCart(item)" class="btn-area">
+        <i class="fa fa-trash"></i>
+        <span class="btn2">Add</span>
+      </button>
     </div>
   </div>
 </template>
@@ -16,6 +21,11 @@ export default {
   computed: {
     item() {
       return this.$store.state.item;
+    },
+  },
+  methods: {
+    addToCart(product) {
+      this.$store.commit("updateCart", product);
     },
   },
   mounted() {

@@ -5,22 +5,17 @@
   >
     <div class="card shadow">
       <img :src="item.image" class="car-img mb-2" alt="Picture of item" />
-    </router-link>
-    <h5 class="text-black">{{ item.name }}</h5>
-    <p class="text-secondary">
-      {{ item.catergory }}
-    </p>
-    <p>R{{ item.price }}</p>
-    <button class="btn-area" >
-      <i class="fa fa-trash"></i>
-      <span class="btn2">Add</span>
-    </button>
-  </div>
+      <h5 class="text-black">{{ item.name }}</h5>
+      <p class="text-secondary">
+        {{ item.catergory }}
+      </p>
+      <p>R{{ item.price }}</p>
+    </div>
+  </router-link>
 </template>
 <script>
 export default {
   props: ["item"],
-  
 };
 </script>
 <style scoped>

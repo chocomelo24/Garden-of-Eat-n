@@ -5,35 +5,83 @@
       <div class="project">
         <div class="shop">
           <div class="box">
-            <img src="item.image" alt="food" />
             <div class="content">
-              <h3></h3>
-              <h4>Price:R</h4>
-              <p class="unit">Quantity:<input value="2" /></p>
-              <button class="btn-area" v-on:click="delitem(id)">
-                <i class="fa fa-trash"></i>
-                <span class="btn2">Remove</span>
-              </button>
+              <div v-for="item of cartItems" :key="item.id">
+                <!-- {{ item }} -->
+                <!-- <h4>Price:R {{ item.price }}</h4>
+                <h4>Price:R {{ item.price }}</h4> -->
+                <h3>{{ item.name }}</h3>
+                <h4>Price:R {{ item.price }}</h4>
+                <img :src="item.image" alt="food" />
+                <!-- <p class="unit">
+                  Quantity:
+                  <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </p> -->
+                <button class="btn-area" v-on:click="delitem(id)">
+                  <i class="fa fa-trash"></i>
+                  <span class="btn2">Remove</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <div class="right-bar">
-          <p><span>Subtotal</span> <span>R90.00</span></p>
+          <p>
+            <span>Subtotal</span> <span>R {{ subtotal }}</span>
+          </p>
           <hr />
-          <p><span>Total</span> <span>R90.00</span></p>
-          <a href="#"> <i class="fa fa-shopping-cart"></i>Checkout</a>
         </div>
       </div>
+    </div>
+    <div>
+      <p>
+        <span>Total</span> <span>R {{ subtotal }}</span>
+      </p>
+      <a href="#"> <i class="fa fa-shopping-cart"></i>Checkout</a>
     </div>
   </body>
 </template>
 <script>
-export default {};
-// methods: {
-//    delitem(id) {
-//     return this.$store.dispatch("", id)
-//   }
-// }
+export default {
+  data() {
+    return {
+      subtotal: "",
+    };
+  },
+  methods: {
+    delitem(id) {
+      return this.$store.dispatch("get", id);
+    },
+    calculatePrice(cartItems) {
+      const item = cartItems;
+
+      const amount = 100;
+      this.subtotal = amount;
+      // console.log(this.cartItems);
+      // console.log(item);
+    },
+  },
+  computed: {
+    cartItems() {
+      return this.$store.state.cart;
+    },
+  },
+  mounted() {
+    console.log(this.$store.state.cart);
+    this.calculatePrice(this.cartItems);
+  },
+};
 </script>
 <style scoped>
 * {
@@ -66,7 +114,7 @@ body {
 .box {
   display: flex;
   width: 100%;
-  height: 200px;
+  height: 100%;
   overflow: hidden;
   margin-bottom: 20px;
   background: white;
@@ -93,7 +141,7 @@ body {
 
 .btn-area {
   position: absolute;
-  bottom: 20px;
+  /* bottom: 20px; */
   right: 20px;
   padding: 10px 25px;
   background-color: #42b983;
