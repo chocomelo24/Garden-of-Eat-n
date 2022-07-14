@@ -26,6 +26,11 @@ const routes = [
     name: "Admin",
     component: () => import("../views/AdminView.vue"),
   },
+  {
+    path: "/menu/:id",
+    name: "SingleCardView",
+    component: () => import("../views/SingleCardView.vue"),
+  },
 ];
 
 const router = createRouter({
