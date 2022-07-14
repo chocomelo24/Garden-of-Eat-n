@@ -1,14 +1,17 @@
 <template>
-  <div class="card shadow">
-    <router-link :to="{ name: 'SingleCardView', params: { id: item.id } }">
+  <router-link
+    :to="{ name: 'SingleCardView', params: { id: item.id } }"
+    class="link"
+  >
+    <div class="card shadow">
       <img :src="item.image" class="car-img mb-2" alt="Picture of item" />
-    </router-link>
-    <h5 class="text-black">{{ item.name }}</h5>
-    <p class="text-secondary">
-      {{ item.catergory }}
-    </p>
-    <p>R{{ item.price }}</p>
-  </div>
+      <p class="text-secondary">
+        {{ item.catergory }}
+      </p>
+      <p>R{{ item.price }}</p>
+      <h5 class="text-black">{{ item.name }}</h5>
+    </div>
+  </router-link>
 </template>
 <script>
 export default {
@@ -18,11 +21,18 @@ export default {
 <style scoped>
 .card {
   color: black;
-  width: 30%;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  transition: all 0.6s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+.link {
+  text-decoration: none;
 }
 
 .card p {

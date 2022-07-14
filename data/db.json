@@ -4,31 +4,33 @@
       "id": 1,
       "full_name": "Mika John Rinquest",
       "email": "mika@gmail.com",
-      "password": "dog"
+      "password": "dog",
+      "isAdmin": true
     },
     {
       "id": 2,
       "full_name": "Isma'eel Adams",
-      "email": "mika@gmail.com",
-      "password": "dog"
+      "email": "isma'eel@gmail.com",
+      "password": "aquaman",
+      "isAdmin": false
     },
     {
       "id": 3,
       "full_name": "Chanique Chelsea Mansoor",
       "email": "chanique@gmail.com",
-      "password": "dog"
+      "password": "bananamilk"
     },
     {
       "id": 4,
       "full_name": "Tristan Chezlin Daniels",
       "email": "tristan@gmail.com",
-      "password": "dog"
+      "password": "youneverknow"
     },
     {
       "id": 5,
       "full_name": "Jason Wandrag",
       "email": "jason@gmail.com",
-      "password": "cat"
+      "password": "goated"
     }
   ],
   "items": [
