@@ -1,5 +1,6 @@
 <template>
-  <div></div>
+  <div v-if="user"></div>
+  <div v-else></div>
 </template>
 <script>
 export default {};
