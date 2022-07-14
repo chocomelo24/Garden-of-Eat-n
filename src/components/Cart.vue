@@ -36,12 +36,10 @@ export default {};
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: montserrat;
   background: white;
 }
-
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -51,7 +49,6 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-
 .project {
   display: flex;
 }
@@ -72,53 +69,46 @@ body {
   height: 200px;
   object-fit: cover;
 }
-
 .content {
   padding: 20px;
   position: relative;
   width: 100%;
 }
-
 .content h3 {
   margin-bottom: 30px;
 }
 .content h4 {
   margin-bottom: 50px;
 }
-
 .btn-area {
   position: absolute;
   bottom: 20px;
   right: 20px;
   padding: 10px 25px;
-  background-color: #42b983;
+  background-color: #42B983;
   color: white;
   cursor: pointer;
   border-radius: 10px;
 }
-
 .btn-area:hover {
-  background-color: #42b983;
+  background-color: #42B983;
   color: white;
 }
-
 .unit input {
   width: 50px;
   padding: 8px;
   text-align: center;
 }
-
 .btn-area i {
   margin-right: 5px;
 }
-
 .right-bar {
   flex: 25%;
   margin-left: 20px;
   padding: 20px;
   height: 400px;
   background: white;
-  box-shadow: #42b983 (100, 100, 111, 0.2) 0.7px 29px 0;
+  box-shadow: #42B983 (100, 100, 111, 0.2) 0.7px 29px 0;
 }
 .right-bar hr {
   margin-bottom: 25px;
@@ -130,7 +120,7 @@ body {
   font-size: 20px;
 }
 .right-bar a {
-  background-color: #42b983;
+  background-color: #42B983;
   color: white;
   text-decoration: none;
   display: block;
@@ -142,9 +132,8 @@ body {
   margin-right: 15px;
 }
 .right-bar a:hover {
-  background-color: #42b983;
+  background-color: #42B983;
 }
-
 @media screen and (max-width: 700px) {
   .content h3 {
     margin-bottom: 15px;
@@ -163,7 +152,6 @@ body {
     width: 200px;
   }
 }
-
 @media screen and (max-width: 900px) {
   .project {
     flex-direction: column;
@@ -173,7 +161,6 @@ body {
     margin-bottom: 20px;
   }
 }
-
 @media screen and (max-width: 125px) {
   .wrapper {
     max-width: 95%;
