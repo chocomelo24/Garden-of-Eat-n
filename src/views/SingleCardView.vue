@@ -6,7 +6,7 @@
       <p class="text-secondary">
         {{ item.catergory }}
       </p>
-      <p>{{item.descriptions}}</p>
+      <p>{{ item.description }}</p>
       <p>R{{ item.price }}</p>
     </div>
   </div>
