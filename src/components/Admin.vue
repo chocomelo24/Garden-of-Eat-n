@@ -22,9 +22,36 @@
       <button type="submit">Login</button>
     </div>
   </form>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th scope="col">Img URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- <th scope="row">{{ item.id }}</th>
+        <td><img :src="item.image" /></td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.category }}</td>
+        <td>{{ item.image }}</td> -->
+      </tr>
+    </tbody>
+  </table>
 </template>
 <script>
-export default {};
+export default {
+  props: ["item"],
+};
 </script>
 <style scoped>
 form {
