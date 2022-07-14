@@ -21,7 +21,8 @@ export default {
   },
   methods: {
     sortByPrice() {
-      this.$store.commit("sortByPrice");
+      //gives function a name (does not need to be the same as the name given in the store)
+      this.$store.commit("sortByPrice"); //runs the function in the store
     },
   },
 };

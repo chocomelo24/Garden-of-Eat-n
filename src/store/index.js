@@ -24,12 +24,13 @@ export default createStore({
 
     sortByPrice: (state) => {
       state.items.sort((a, b) => {
-        return a.price - b.price;
+        return a.price - b.price; //like vanilla javascript, this is how you make a sort function
       });
       if (!state.asc) {
-        state.items.reverse();
+        //if the asc is not true, it reverses the current order of the list
+        state.items.reverse(); // reverts the order
       }
-      state.asc = !state.asc;
+      state.asc = !state.asc; //states that when the function is run, asc becomes false instead of true
     },
   },
   // Actions are for ASYNC / Fetch calls
@@ -40,6 +41,7 @@ export default createStore({
         `http://localhost:3000/users?email=${email}&password=${password}` //the ${} is tha payload, and will compare the inputs to the original array
       );
       const userData = await response.json();
+      if (!userData.length) return alert("No user found with these details"); //Lets the user know that if the information put inside does not match the array, an alert will appear
       context.commit("setUser", userData[0]);
 
       // const isAdmin = userData[0].isAdmin;
@@ -87,12 +89,18 @@ export default createStore({
       </script>
       */
     },
+    getUser: async (context) => {
+      fetch("http://localhost:3000/users")
+        .then((res) => res.json())
+        .then((item) => context.commit("setUser", user));
+    },
 
     getSingleItem: async (context, id) => {
       fetch("http://localhost:3000/items/" + id)
         .then((res) => res.json())
         .then((item) => context.commit("setSingleItem", item));
     },
+
     createItem: async (context, item) => {
       fetch("http://localhost:3000/items/", {
         method: "POST",
@@ -106,6 +114,7 @@ export default createStore({
           context.dispatch("getItems", item);
         });
     },
+
     editItem: async (context, item) => {
       fetch("http://localhost:3000/items/" + id, {
         method: "PUT",
@@ -119,6 +128,7 @@ export default createStore({
           context.dispatch("getItems", item);
         });
     },
+
     deleteItem: async (context, id) => {
       fetch("http://localhost:3000/items/" + id, {
         method: "DELETE",

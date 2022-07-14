@@ -1,34 +1,8 @@
 <template>
   <!-- "!== null is" is not necessary, but is good practice as it adds extra security to the function working properly -->
   <div v-if="User !== null">
+    Welcome {{ User.full_name }}
     <!-- If there is user is not null, display this -->
-<<<<<<< HEAD
-=======
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Image</th>
-          <th scope="col">Name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Price</th>
-          <th scope="col">Category</th>
-          <th scope="col">Img URL</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <!-- <th scope="row">{{ item.id }}</th>
-          <td><img :src="item.image" /></td>
-          <td>{{ item.name }}</td>
-          <td>{{ item.description }}</td>
-          <td>{{ item.price }}</td>
-          <td>{{ item.category }}</td>
-          <td>{{ item.image }}</td> -->
-        </tr>
-      </tbody>
-    </table>
->>>>>>> e7e12d3fa90f9ccdab82f51a7ab02f7047a855ac
   </div>
   <div v-else>
     <!-- If there is user is null, display this -->
@@ -72,6 +46,13 @@ export default {
     User() {
       return store.state.user; //Pulls the array from the store
     },
+    item() {
+      return this.$store.state.item;
+    },
+  },
+
+  mounted() {
+    this.$store.dispatch("getUser", this.id);
   },
   methods: {
     login() {
