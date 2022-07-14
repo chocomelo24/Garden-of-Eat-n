@@ -4,13 +4,15 @@
       "id": 1,
       "full_name": "Mika John Rinquest",
       "email": "mika@gmail.com",
-      "password": "dog"
+      "password": "dog",
+      "isAdmin": true
     },
     {
       "id": 2,
       "full_name": "Isma'eel Adams",
       "email": "isma'eel@gmail.com",
-      "password": "aquaman"
+      "password": "aquaman",
+      "isAdmin": false
     },
     {
       "id": 3,
