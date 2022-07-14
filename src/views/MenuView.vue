@@ -1,5 +1,5 @@
 <template>
-  <button @click="sortByPrice">Sort By Price</button>
+  <button class="btn mb-3 btn-sm" @click="sortByPrice">Sort By Price</button>
   <div v-if="items" class="container d-flex flex-row gap-5">
     <ItemCard v-for="item in items" :key="item.id" :item="item" />
   </div>
@@ -42,5 +42,8 @@ export default {
     flex-direction: column;
     text-align: center;
   }
+}
+.btn {
+  width: 150px;
 }
 </style>
