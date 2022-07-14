@@ -1,3 +1,4 @@
+import router from "@/router";
 import { createStore } from "vuex";
 
 export default createStore({
@@ -15,16 +16,27 @@ export default createStore({
     setSingleItem: (state, item) => {
       state.item = item;
     },
+    setUser: (state, user) => {
+      state.user = user;
+    },
   },
   // Actions are for ASYNC / Fetch calls
   actions: {
     login: async (context, payload) => {
       const { email, password } = payload;
       const response = await fetch(
-        `http://localhost:3000/users?email=${email}&password=${password}`
+        `http://localhost:3000/users?email=${email}&password=${password}` //the ${} is tha payload, and will compare the inputs to the original array
       );
       const userData = await response.json();
       context.commit("setUser", userData[0]);
+
+      // const isAdmin = userData[0].isAdmin;
+      // if (isAdmin === true) {
+      //   // router.push('')
+      // } else {
+      //   router.push("/");
+      // }
+      // console.log(userData);
     },
 
     getItems: async (context) => {
