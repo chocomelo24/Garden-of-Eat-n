@@ -9,7 +9,7 @@
       <p>{{ item.description }}</p>
       <p>R{{ item.price }}</p>
       <!-- <input type="number" placeholder="qty" v-model="qty" /> -->
-      <button @click="addToCart(item)" class="btn">
+      <button @click="addToCart(item)" class="btn mb-3">
         <i class="fa-solid fa-cart-arrow-down"></i>
         <span class="btn2">Add</span>
       </button>
