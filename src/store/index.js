@@ -27,6 +27,9 @@ export default createStore({
     setUser: (state, user) => {
       state.user = user;
     },
+    removeFromCart: (state, cart) => {
+      state.cart = cart;
+    },
 
     sortByPrice: (state) => {
       state.items.sort((a, b) => {
@@ -145,6 +148,10 @@ export default createStore({
     addToCart: async (context, id) => {
       this.state.cart.item.push(id);
       context.dispatch("updateCart", this.state.cart);
+    },
+    deleteFromCart: async (context, id) => {
+      const newCart = context.state.cart.filter((item) => item.id != id);
+      context.commit("removeFromCart", newCart);
     },
   },
 });

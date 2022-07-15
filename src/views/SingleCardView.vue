@@ -1,6 +1,6 @@
 <template>
   <div v-if="item" class="container">
-    <div class="card shadow">
+    <div class="card shadow mb-3">
       <img :src="item.image" class="car-img mb-2" alt="Picture of item" />
       <h5 class="text-black">{{ item.name }}</h5>
       <p class="text-secondary">
@@ -9,8 +9,8 @@
       <p>{{ item.description }}</p>
       <p>R{{ item.price }}</p>
       <!-- <input type="number" placeholder="qty" v-model="qty" /> -->
-      <button @click="addToCart(item)" class="btn-area">
-        <i class="fa fa-trash"></i>
+      <button @click="addToCart(item)" class="btn mb-3">
+        <i class="fa-solid fa-cart-arrow-down"></i>
         <span class="btn2">Add</span>
       </button>
     </div>
@@ -25,8 +25,8 @@ export default {
     },
   },
   methods: {
-    addToCart(product) {
-      this.$store.commit("updateCart", product);
+    addToCart(item) {
+      this.$store.commit("updateCart", item);
     },
   },
   mounted() {
@@ -53,6 +53,7 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 
 .card p {
   font-family: sans-serif;

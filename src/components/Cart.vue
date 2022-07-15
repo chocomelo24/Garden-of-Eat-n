@@ -28,12 +28,12 @@
                     <option value="10">10</option>
                   </select>
                 </p> -->
-                <button class="btn-area" v-on:click="delitem(id)">
+                <button @click="deleteFromCart(item.id)" class="btn-area">
                   <i class="fa fa-trash"></i>
                   <span class="btn2">Remove</span>
                 </button>
                 <div class="right-bar">
-                  <p class="d-flex justify-content-start gap-3">
+                  <p class="d-flex justify-content- gap-3">
                     <span>Subtotal: R{{ item.price }}</span>
                   </p>
                   <hr />
@@ -46,9 +46,9 @@
     </div>
     <div>
       <p>
-        <span>Total</span> <span>R {{ total }}</span>
+        <span>Total</span> <span>R {{ calculatePrice }}</span>
       </p>
-      <a href="#"> <i class="fa fa-shopping-cart"></i>Checkout</a>
+      <a href="#"> <i class="fa fa-shopping-cart mb-3"></i>Checkout</a>
     </div>
   </body>
 </template>
@@ -60,25 +60,23 @@ export default {
     };
   },
   methods: {
-    delitem(id) {
-      return this.$store.dispatch("get", id);
+    deleteFromCart(id) {
+      return this.$store.dispatch("deleteFromCart", id);
     },
   },
+
   computed: {
-    calculatePrice(cartItems) {
-      const item = cartItems;
-      const amount = this.$store.state.cart.items.reduce;
-      return (this.$store.state.cart.items.this.total = amount);
-      // console.log(this.cartItems);
-      // console.log(item);
+    calculatePrice() {
+      return this.$store.state.cart.reduce((accumulator, currentValue) => {
+        return accumulator + parseInt(currentValue.price);
+      }, 0);
     },
     cartItems() {
       return this.$store.state.cart;
     },
-  },
-  mounted() {
-    console.log(this.$store.state.cart);
-    this.calculatePrice(this.cartItems);
+    item() {
+      return this.$store.state.item;
+    },
   },
 };
 </script>
