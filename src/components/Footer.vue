@@ -1,5 +1,5 @@
 <template>
-<footer class="new_footer_area bg_color">
+<footer class="new_footer_area bg_color mt-4">
             <div class="footer_bottom">
                 <div class="container">
                     <div class="row align-items-center">
@@ -24,7 +24,6 @@ export default {};
 
 .new_footer_area .footer_bottom {
     padding-top: 5px;
-    padding-bottom: 50px;
 }
 .footer_bottom {
     font-size: 14px;
