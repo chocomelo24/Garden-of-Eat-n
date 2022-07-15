@@ -11,7 +11,8 @@
                 <!-- <h4>Price:R {{ item.price }}</h4>
                 <h4>Price:R {{ item.price }}</h4> -->
                 <h3>{{ item.name }}</h3>
-                <h4>Price:R {{ item.price }}</h4>
+                <h4>{{ item.category }}</h4>
+                <h4>{{ item.description }}</h4>
                 <img :src="item.image" alt="food" />
                 <!-- <p class="unit">
                   Quantity:
@@ -32,21 +33,21 @@
                   <i class="fa fa-trash"></i>
                   <span class="btn2">Remove</span>
                 </button>
+                <div class="right-bar">
+                  <p>
+                    <span>Subtotal</span> <span>R {{ item.price }}</span>
+                  </p>
+                  <hr />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="right-bar">
-          <p>
-            <span>Subtotal</span> <span>R {{ subtotal }}</span>
-          </p>
-          <hr />
         </div>
       </div>
     </div>
     <div>
       <p>
-        <span>Total</span> <span>R {{ subtotal }}</span>
+        <span>Total</span> <span>R {{ total }}</span>
       </p>
       <a href="#"> <i class="fa fa-shopping-cart"></i>Checkout</a>
     </div>
@@ -56,23 +57,22 @@
 export default {
   data() {
     return {
-      subtotal: "",
+      total: "",
     };
   },
   methods: {
     delitem(id) {
       return this.$store.dispatch("get", id);
     },
+  },
+  computed: {
     calculatePrice(cartItems) {
       const item = cartItems;
-
-      const amount = 100;
-      this.subtotal = amount;
+      const amount = this.$store.state.cart.items.reduce;
+      return (this.$store.state.cart.items.this.total = amount);
       // console.log(this.cartItems);
       // console.log(item);
     },
-  },
-  computed: {
     cartItems() {
       return this.$store.state.cart;
     },
@@ -138,13 +138,13 @@ body {
   /* bottom: 20px; */
   right: 20px;
   padding: 10px 25px;
-  background-color: #42B983;
+  background-color: #42b983;
   color: white;
   cursor: pointer;
   border-radius: 10px;
 }
 .btn-area:hover {
-  background-color: #42B983;
+  background-color: #42b983;
   color: white;
 }
 .unit input {
@@ -159,9 +159,9 @@ body {
   flex: 25%;
   margin-left: 20px;
   padding: 20px;
-  height: 400px;
+  height: 100px;
   background: white;
-  box-shadow: #42B983 (100, 100, 111, 0.2) 0.7px 29px 0;
+  box-shadow: #42b983 (100, 100, 111, 0.2) 0.7px 29px 0;
 }
 .right-bar hr {
   margin-bottom: 25px;
@@ -173,7 +173,7 @@ body {
   font-size: 20px;
 }
 .right-bar a {
-  background-color: #42B983;
+  background-color: #42b983;
   color: white;
   text-decoration: none;
   display: block;
@@ -185,7 +185,7 @@ body {
   margin-right: 15px;
 }
 .right-bar a:hover {
-  background-color: #42B983;
+  background-color: #42b983;
 }
 @media screen and (max-width: 700px) {
   .content h3 {
