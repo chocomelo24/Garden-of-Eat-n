@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- If there is user is null, display this -->
     <form @submit.prevent="login">
       <div class="container">
         <label for="email"><b>Email</b></label>
@@ -27,6 +26,7 @@
       </div>
     </form>
   </div>
+  <h2 v-if="user">Welcome {{ user.full_name }}</h2>
 </template>
 <script>
 export default {
@@ -43,16 +43,15 @@ export default {
     },
   },
 
-  mounted() {
-    this.$store.dispatch("getUser");
-  },
   methods: {
     login() {
+      console.log(this.email, this.psw);
       this.$store.dispatch(
         "login" /*login is the context(array)*/,
         {
+          /*The name of the objects must match your database*/
           email: this.email, //retrieves the input from the user
-          psw: this.psw, //retrieves the input from the user
+          password: this.psw, //retrieves the input from the user
         } /*This object becomes the payload. The payload will be compared to the original array to see if the inputs match*/
       );
     },

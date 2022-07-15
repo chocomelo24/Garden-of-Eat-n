@@ -50,6 +50,9 @@ export default createStore({
         `http://localhost:3000/users?email=${email}&password=${password}` //the ${} is tha payload, and will compare the inputs to the original array
       );
       const userData = await response.json();
+      console.log(
+        `http://localhost:3000/users?email=${email}&password=${password}`
+      );
       if (!userData.length) return alert("No user found with these details"); //Lets the user know that if the information put inside does not match the array, an alert will appear
       context.commit("setUser", userData[0]);
 

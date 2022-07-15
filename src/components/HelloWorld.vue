@@ -1,6 +1,6 @@
 <template>
   <section id="landing">
-    <h1>Welcome to Garden of Eat'n</h1>
+    <h1>Welcome to the Garden of Eat'n</h1>
     <h3>Don't expect to find any apples on this menu</h3>
   </section>
 </template>
@@ -26,6 +26,7 @@ export default {};
   background-position: center;
   background-size: cover;
 }
+
 #landing h1,
 #landing h3 {
   display: flex;
@@ -34,6 +35,7 @@ export default {};
   text-align: center;
   color: white;
   font-family: sans-serif;
-  text-shadow: 1px 4px 8px black;
+  text-shadow: 6px 8px 12px black;
+  font-weight: bold;
 }
 </style>

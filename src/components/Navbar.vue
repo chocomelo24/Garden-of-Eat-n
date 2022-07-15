@@ -15,11 +15,9 @@
 export default {
   name: "Navbar",
 
-  mounted() {
-    this.$store.dispatch("getUser");
-  },
   computed: {
     user() {
+      console.log(this.$store.state.user);
       return this.$store.state.user; //Pulls the array from the store
     },
   },

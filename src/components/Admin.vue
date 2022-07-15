@@ -1,5 +1,4 @@
 <template>
-  <!-- <h1>Welcome {{ user.full_name }}</h1> -->
   <input type="text" v-model="search" placeholder="Search" />
   <select v-model="category">
     <option value="All" selected>All</option>
@@ -67,6 +66,7 @@ export default {
   },
 
   mounted() {
+    if (!this.user) this.$router.push("/login");
     this.$store.dispatch("getItems");
   },
 

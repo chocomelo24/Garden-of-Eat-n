@@ -45,7 +45,7 @@
       </div>
     </div>
     <div>
-      <p>
+      <p class="namecart">
         <span>Total</span> <span>R {{ calculatePrice }}</span>
       </p>
       <router-link to="/checkout">Checkout</router-link>
@@ -178,6 +178,15 @@ body {
 .right-bar a:hover {
   background-color: #42b983;
 }
+
+span {
+  font-size: 25px;
+}
+
+a {
+  font-size: 20px;
+}
+
 @media screen and (max-width: 700px) {
   .content h3 {
     margin-bottom: 15px;

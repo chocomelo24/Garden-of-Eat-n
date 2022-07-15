@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex flex-row justify-content-center align-items">
-    <button class="btn mb-3 mt-3 me-3 btn-sm" @click="sortByPrice">
+  <div class="d-flex flex-row justify-content-center align-items mt-3 mb-3">
+    <button class="form-control btn mb-3 me-3 btn-sm" @click="sortByPrice">
       Sort By Price
     </button>
     <input
@@ -83,5 +83,8 @@ export default {
 }
 .btn {
   width: 150px;
+}
+select {
+  height: 50px;
 }
 </style>
