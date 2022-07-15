@@ -1,6 +1,7 @@
 <template>
-  <button class="btn mb-3 btn-sm" @click="sortByPrice">Sort By Price</button>
-  <input type="text" placeholder="Search..." v-model="search" />
+<div class="d-flex flex-row justify-content-center align-items">
+  <button class="btn mb-3 mt-3 me-3 btn-sm" @click="sortByPrice">Sort By Price</button>
+  <input type="text" class="form-control" placeholder="Search..." v-model="search" />
   <select v-model="category">
     <option value="All" selected>All</option>
     <option value="Starter">Starter</option>
@@ -9,6 +10,7 @@
     <option value="Drink">Drink</option>
     <option value="Sides">Side</option>
   </select>
+  </div>
   <div v-if="filteredItems" class="container d-flex flex-row gap-5">
     <ItemCard v-for="item in filteredItems" :key="item.id" :item="item" />
   </div>
@@ -57,6 +59,9 @@ export default {
   gap: 30px;
   text-align: center;
   flex-wrap: wrap;
+}
+.card{
+  columns: #42b983;
 }
 @media screen and (max-width: 800px) {
   .property-container {

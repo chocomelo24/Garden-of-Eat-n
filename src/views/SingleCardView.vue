@@ -54,6 +54,7 @@ a {
   padding-right: 20px;
 }
 
+
 .card p {
   font-family: sans-serif;
   display: flex;

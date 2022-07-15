@@ -7,7 +7,7 @@
                             <p class="mb-0 f_400">© Garden of Eat'n Inc.. 2022 All rights reserved.</p>
                         </div>
                         <div class="col-lg-6 col-sm-5 text-right mt-4">
-                            <p>Made with love in Garden of Eat'n</p>
+                            <p>Contact us @ 111-435-6969</p>
                         </div>
                     </div>
                 </div>
