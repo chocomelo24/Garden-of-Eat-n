@@ -33,8 +33,8 @@
                   <span class="btn2">Remove</span>
                 </button>
                 <div class="right-bar">
-                  <p>
-                    <span>Subtotal</span> <span>R {{ item.price }}</span>
+                  <p class="d-flex justify-content-start gap-3">
+                    <span>Subtotal: R{{ item.price }}</span>
                   </p>
                   <hr />
                 </div>
