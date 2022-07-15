@@ -4,6 +4,15 @@
   <div v-if="User !== null">
     <!-- If there is user is not null, display this -->
     Welcome {{ User.full_name }}
+    <input type="text" v-model="search" placeholder="Search" />
+    <select v-model="category">
+      <option value="All" selected>All</option>
+      <option value="Starter">Starter</option>
+      <option value="Main">Main</option>
+      <option value="Dessert">Dessert</option>
+      <option value="Drink">Drink</option>
+      <option value="Sides">Side</option>
+    </select>
     <table class="table">
       <thead>
         <tr>
@@ -19,7 +28,7 @@
       <tbody>
         <tr v-for="item in items" :key="item.id">
           <td scope="row">{{ item.id }}</td>
-          <td><img :src="item.image" /></td>
+          <td><img :src="item.image" class="image" /></td>
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
           <td>{{ item.price }}</td>
@@ -65,6 +74,8 @@ export default {
     return {
       email: "", //This makes the default input an empty string
       psw: "", //This makes the default input an empty string
+      search: "",
+      category: "All",
     };
   },
 
@@ -73,7 +84,16 @@ export default {
       return store.state.user; //Pulls the array from the store
     },
     items() {
-      return this.$store.state.items;
+      // return this.$store.state.items?.filter((item) => {
+      //   return item.name?.toLowerCase().includes(this.search.toLowerCase());
+      return this.$store.state.items?.filter((item) => {
+        let isMatch = true;
+        if (!item.name.toLowerCase().includes(this.search.toLowerCase()))
+          isMatch = false;
+        if (this.category !== "All" && item.category !== this.category)
+          isMatch = false;
+        return isMatch;
+      });
     },
   },
 
@@ -96,6 +116,7 @@ export default {
 };
 </script>
 <style scoped>
+/* Login */
 form {
   border: 3px solid #f1f1f1;
 }
@@ -135,5 +156,12 @@ span.psw {
   .cancelbtn {
     width: 100%;
   }
+}
+
+/* Admin */
+
+.image {
+  width: 100px;
+  aspect-ratio: 1;
 }
 </style>
