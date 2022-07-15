@@ -116,6 +116,9 @@ export default {
 };
 </script>
 <style scoped>
+form {
+  height: 100vh;
+}
 /* Login */
 form {
   border: 3px solid #f1f1f1;
