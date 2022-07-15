@@ -1,12 +1,27 @@
 <template>
   <button class="btn mb-3 btn-sm" @click="sortByPrice">Sort By Price</button>
-  <div v-if="items" class="container d-flex flex-row gap-5">
-    <ItemCard v-for="item in items" :key="item.id" :item="item" />
+  <input type="text" placeholder="Search..." v-model="search" />
+  <select v-model="category">
+    <option value="All" selected>All</option>
+    <option value="Starter">Starter</option>
+    <option value="Main">Main</option>
+    <option value="Dessert">Dessert</option>
+    <option value="Drink">Drink</option>
+    <option value="Sides">Side</option>
+  </select>
+  <div v-if="filteredItems" class="container d-flex flex-row gap-5">
+    <ItemCard v-for="item in filteredItems" :key="item.id" :item="item" />
   </div>
 </template>
 <script>
 import ItemCard from "@/components/ItemCard.vue";
 export default {
+  data() {
+    return {
+      search: "",
+      category: "All",
+    };
+  },
   components: {
     ItemCard,
   },
@@ -15,8 +30,15 @@ export default {
     this.$store.dispatch("getItems");
   },
   computed: {
-    items() {
-      return this.$store.state.items;
+    filteredItems() {
+      return this.$store.state.items?.filter((item) => {
+        let isMatch = true;
+        if (!item.name.toLowerCase().includes(this.search.toLowerCase()))
+          isMatch = false;
+        if (this.category !== "All" && item.category !== this.category)
+          isMatch = false;
+        return isMatch;
+      });
     },
   },
   methods: {

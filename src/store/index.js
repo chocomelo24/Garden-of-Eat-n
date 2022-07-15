@@ -23,6 +23,7 @@ export default createStore({
     },
     updateCart: (state, item) => {
       state.cart.push(item);
+    },
     setUser: (state, user) => {
       state.user = user;
     },
