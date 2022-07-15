@@ -9,8 +9,8 @@
       <p>{{ item.description }}</p>
       <p>R{{ item.price }}</p>
       <!-- <input type="number" placeholder="qty" v-model="qty" /> -->
-      <button @click="addToCart(item)" class="btn-area">
-        <i class="fa fa-trash"></i>
+      <button @click="addToCart(item)" class="btn">
+        <i class="fa-solid fa-cart-arrow-down"></i>
         <span class="btn2">Add</span>
       </button>
     </div>
@@ -25,8 +25,8 @@ export default {
     },
   },
   methods: {
-    addToCart(product) {
-      this.$store.commit("updateCart", product);
+    addToCart(item) {
+      this.$store.commit("updateCart", item);
     },
   },
   mounted() {

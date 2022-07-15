@@ -28,7 +28,7 @@
                     <option value="10">10</option>
                   </select>
                 </p> -->
-                <button class="btn-area" v-on:click="delitem(id)">
+                <button @click="deleteFromCart(item.id)" class="btn-area">
                   <i class="fa fa-trash"></i>
                   <span class="btn2">Remove</span>
                 </button>
@@ -60,10 +60,11 @@ export default {
     };
   },
   methods: {
-    delitem(id) {
-      return this.$store.dispatch("get", id);
+    deleteFromCart(id) {
+      return this.$store.dispatch("deleteFromCart", id);
     },
   },
+
   computed: {
     calculatePrice() {
       return this.$store.state.cart.reduce((accumulator, currentValue) => {
@@ -72,6 +73,9 @@ export default {
     },
     cartItems() {
       return this.$store.state.cart;
+    },
+    item() {
+      return this.$store.state.item;
     },
   },
 };
