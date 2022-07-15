@@ -130,7 +130,7 @@ input[type="password"] {
   box-sizing: border-box;
 }
 button {
-  background-color: #04aa6d;
+  background-color: #42b983;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;

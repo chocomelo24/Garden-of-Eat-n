@@ -1,39 +1,42 @@
 <template>
-  <div class="container">
-    <div class="name">
-      <p><i class="fa-solid fa-copyright">Garden of Eat'n</i></p>
-    </div>
-    <div class="company">
-      <p>Garden of Eat'n</p>
-    </div>
-    <div class="phone">
-      <p>Phone us at : 000 111 2222</p>
-    </div>
-  </div>
+<footer class="new_footer_area bg_color">
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <p class="mb-0 f_400">© Garden of Eat'n Inc.. 2022 All rights reserved.</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-5 text-right mt-4">
+                            <p>Made with love in Garden of Eat'n</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 </template>
 <script>
 export default {};
 </script>
 <style scoped>
-.container {
-  margin: 0;
-  display: flex;
-  height: 20px;
-  width: 100%;
-  background-color: black;
-  color: white;
+.new_footer_area {
+    background: #42b983;
 }
 
-.name {
-  width: 30%;
-  background: black;
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
 }
-.company {
-  width: 30%;
-  background: black;
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: white;
+    padding: 27px 0px;
 }
-.phone {
-  width: 30%;
-  background: black;
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
 }
+/*************footer End*****************/
+
 </style>
