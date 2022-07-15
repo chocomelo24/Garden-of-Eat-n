@@ -10,10 +10,9 @@
                 <!-- {{ item }} -->
                 <!-- <h4>Price:R {{ item.price }}</h4>
                 <h4>Price:R {{ item.price }}</h4> -->
+                <img :src="item.image" class="mb-2" alt="food" />
                 <h3>{{ item.name }}</h3>
-                <h4>{{ item.category }}</h4>
-                <h4>{{ item.description }}</h4>
-                <img :src="item.image" alt="food" />
+                <p class="color-secondary">{{ item.category }}</p>
                 <!-- <p class="unit">
                   Quantity:
                   <select name="quantity" id="quantity">
@@ -126,12 +125,6 @@ body {
   padding: 20px;
   position: relative;
   width: 100%;
-}
-.content h3 {
-  margin-bottom: 30px;
-}
-.content h4 {
-  margin-bottom: 50px;
 }
 .btn-area {
   position: absolute;
