@@ -42,7 +42,7 @@ export default {
     filteredItems() {
       return this.$store.state.items?.filter((item) => {
         let isMatch = true;
-        if (!item.name.toLowerCase().includes(this.search.toLowerCase()))
+        if (!item.name?.toLowerCase().includes(this.search.toLowerCase()))
           isMatch = false;
         if (this.category !== "All" && item.category !== this.category)
           isMatch = false;
