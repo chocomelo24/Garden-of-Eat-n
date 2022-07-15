@@ -33,7 +33,7 @@
                   <span class="btn2">Remove</span>
                 </button>
                 <div class="right-bar">
-                  <p class="d-flex justify-content-start gap-3">
+                  <p class="d-flex justify-content- gap-3">
                     <span>Subtotal: R{{ item.price }}</span>
                   </p>
                   <hr />
@@ -46,7 +46,7 @@
     </div>
     <div>
       <p>
-        <span>Total</span> <span>R {{ total }}</span>
+        <span>Total</span> <span>R {{ calculatePrice }}</span>
       </p>
       <a href="#"> <i class="fa fa-shopping-cart"></i>Checkout</a>
     </div>
@@ -65,20 +65,14 @@ export default {
     },
   },
   computed: {
-    calculatePrice(cartItems) {
-      const item = cartItems;
-      const amount = this.$store.state.cart.items.reduce;
-      return (this.$store.state.cart.items.this.total = amount);
-      // console.log(this.cartItems);
-      // console.log(item);
+    calculatePrice() {
+      return this.$store.state.cart.reduce((accumulator, currentValue) => {
+        return accumulator + parseInt(currentValue.price);
+      }, 0);
     },
     cartItems() {
       return this.$store.state.cart;
     },
-  },
-  mounted() {
-    console.log(this.$store.state.cart);
-    this.calculatePrice(this.cartItems);
   },
 };
 </script>
