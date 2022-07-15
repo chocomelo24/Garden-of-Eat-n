@@ -23,15 +23,9 @@ export default createStore({
     },
     updateCart: (state, item) => {
       state.cart.push(item);
-<<<<<<< HEAD
     },
     setUser: (state, user) => {
       state.user = user;
-=======
-      setUser: (state, user) => {
-        state.user = user;
-      };
->>>>>>> df039b1a80788468b3cd27de0c3ce12b4e8f3d27
     },
 
     sortByPrice: (state) => {

@@ -23,6 +23,11 @@ const routes = [
     component: () => import("../views/AdminView.vue"),
   },
   {
+    path: "/login",
+    name: "Login",
+    component: () => import("../views/Login.vue"),
+  },
+  {
     path: "/menu/:id",
     name: "SingleCardView",
     component: () => import("../views/SingleCardView.vue"),

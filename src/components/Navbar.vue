@@ -3,20 +3,34 @@
     <router-link class="text" to="/">Home</router-link> |
     <router-link class="text" to="/menu">Menu</router-link> |
     <router-link class="text" to="/cart">Cart</router-link> |
-    <router-link class="text" to="/admin">Admin</router-link>
+    <div v-if="user">
+      <router-link class="text" to="/admin">Admin</router-link>
+    </div>
+    <div v-else>
+      <router-link class="text" to="/login">Login</router-link>
+    </div>
   </nav>
 </template>
 <script>
 export default {
   name: "Navbar",
+
+  mounted() {
+    this.$store.dispatch("getUser");
+  },
+  computed: {
+    user() {
+      return this.$store.state.user; //Pulls the array from the store
+    },
+  },
 };
 </script>
 
 <style scoped>
-nav{
+nav {
   background-color: #42b983;
 }
-.text{
+.text {
   color: white;
 }
 nav a.router-link-exact-active {

@@ -6,7 +6,7 @@
     <option value="Starter">Starter</option>
     <option value="Main">Main</option>
     <option value="Dessert">Dessert</option>
-    <option value="Drink">Drink</option>
+    <option value="Drinks">Drink</option>
     <option value="Sides">Side</option>
   </select>
   <div v-if="filteredItems" class="container d-flex flex-row gap-5">

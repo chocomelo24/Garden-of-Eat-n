@@ -1,71 +1,43 @@
 <template>
-  <!-- "!== null is" is not necessary, but is good practice as it adds extra security to the function working properly -->
-  <!-- If there is user is not null, display this -->
-  <div v-if="User !== null">
-    <!-- If there is user is not null, display this -->
-    Welcome {{ User.full_name }}
-    <input type="text" v-model="search" placeholder="Search" />
-    <select v-model="category">
-      <option value="All" selected>All</option>
-      <option value="Starter">Starter</option>
-      <option value="Main">Main</option>
-      <option value="Dessert">Dessert</option>
-      <option value="Drink">Drink</option>
-      <option value="Sides">Side</option>
-    </select>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Image</th>
-          <th scope="col">Name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Price</th>
-          <th scope="col">Category</th>
-          <th scope="col">Img URL</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in items" :key="item.id">
-          <td scope="row">{{ item.id }}</td>
-          <td><img :src="item.image" class="image" /></td>
-          <td>{{ item.name }}</td>
-          <td>{{ item.description }}</td>
-          <td>{{ item.price }}</td>
-          <td>{{ item.category }}</td>
-          <td>{{ item.image }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div v-else>
-    <!-- If there is user is null, display this -->
-    <form @submit.prevent="login">
-      <div class="container">
-        <label for="email"><b>Email</b></label>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Enter Email"
-          name="email"
-          required
-          v-model="email"
-        />
-
-        <label for="psw"><b>Password</b></label>
-        <input
-          type="password"
-          class="form-control"
-          placeholder="Enter Password"
-          name="psw"
-          required
-          v-model="psw"
-        />
-
-        <button type="submit">Login</button>
-      </div>
-    </form>
-  </div>
+  <!-- <h1>Welcome {{ user.full_name }}</h1> -->
+  <input type="text" v-model="search" placeholder="Search" />
+  <select v-model="category">
+    <option value="All" selected>All</option>
+    <option value="Starter">Starter</option>
+    <option value="Main">Main</option>
+    <option value="Dessert">Dessert</option>
+    <option value="Drinks">Drink</option>
+    <option value="Sides">Side</option>
+  </select>
+  <button @click="modal">Add</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th scope="col">Img URL</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="item in items" :key="item.id">
+        <td scope="row">{{ item.id }}</td>
+        <td><img :src="item.image" class="image" /></td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.category }}</td>
+        <td>{{ item.image }}</td>
+        <td><i class="fa-solid fa-trash-can"></i></td>
+        <td><i class="fa-solid fa-pen-clip"></i></td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 <script>
 import store from "@/store";
@@ -80,8 +52,8 @@ export default {
   },
 
   computed: {
-    User() {
-      return store.state.user; //Pulls the array from the store
+    user() {
+      return this.$store.state.user; //Pulls the array from the store
     },
     items() {
       // return this.$store.state.items?.filter((item) => {
@@ -108,56 +80,15 @@ export default {
         "login" /*login is the context(array)*/,
         {
           email: this.email, //retrieves the input from the user
-          password: this.psw, //retrieves the input from the user
+          psw: this.psw, //retrieves the input from the user
         } /*This object becomes the payload. The payload will be compared to the original array to see if the inputs match*/
       );
     },
+    modal() {},
   },
 };
 </script>
 <style scoped>
-/* Login */
-form {
-  border: 3px solid #f1f1f1;
-}
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-button {
-  background-color: #42b983;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-button:hover {
-  opacity: 0.8;
-}
-.container {
-  padding: 16px;
-}
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
-
 /* Admin */
 
 .image {
