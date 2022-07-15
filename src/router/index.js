@@ -28,6 +28,12 @@ const routes = [
     component: () => import("../views/SingleCardView.vue"),
     props: true,
   },
+  {
+    path: "/checkout",
+    name: "checkoutview",
+    component: () => import("../views/CheckOutView.vue"),
+    props: true,
+  },
 ];
 
 const router = createRouter({
