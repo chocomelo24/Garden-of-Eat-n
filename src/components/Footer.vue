@@ -19,23 +19,27 @@ export default {};
 </script>
 <style scoped>
 .new_footer_area {
-    background: #42b983;
+  background: #42b983;
 }
 
 .new_footer_area .footer_bottom {
     padding-top: 5px;
 }
 .footer_bottom {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 20px;
-    color: white;
-    padding: 27px 0px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  color: white;
+  padding: 27px 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: white;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
 }
 /*************footer End*****************/
-
 </style>

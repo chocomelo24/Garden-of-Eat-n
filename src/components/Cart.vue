@@ -48,7 +48,7 @@
       <p>
         <span>Total</span> <span>R {{ calculatePrice }}</span>
       </p>
-      <a href="#"> <i class="fa fa-shopping-cart"></i>Checkout</a>
+      <a href="#"> <i class="fa fa-shopping-cart mb-3"></i>Checkout</a>
     </div>
   </body>
 </template>
