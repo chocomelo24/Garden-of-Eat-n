@@ -46,7 +46,7 @@
     </div>
     <div>
       <p class="namecart">
-        <span>Total</span> <span>R {{ calculatePrice }}</span>
+        <span>Total</span> <span>R{{ calculatePrice }}</span>
       </p>
       <router-link to="/checkout">Checkout</router-link>
     </div>

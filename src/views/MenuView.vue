@@ -84,7 +84,11 @@ export default {
 .btn {
   width: 150px;
 }
-select {
-  height: 50px;
+select[data-v-3ec79cde] {
+    height: 45px;
+    margin-top: 1px;
+    margin-left: 5px;
 }
+
+
 </style>

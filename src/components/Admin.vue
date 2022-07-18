@@ -19,7 +19,8 @@
         <th scope="col">Price</th>
         <th scope="col">Category</th>
         <th scope="col">Img URL</th>
-        <th>Delete</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -31,15 +32,17 @@
         <td>{{ item.price }}</td>
         <td>{{ item.category }}</td>
         <td>{{ item.image }}</td>
-        <td><i class="fa-solid fa-trash-can" @click="deleteItem(id)"></i></td>
-        <td></td>
+        <td><EditModal /></td>
+        <td><i class="fa-solid fa-trash-can" @click="deleteItem(item.id)"></i></td>
       </tr>
     </tbody>
   </table>
 </template>
 <script>
 import store from "@/store";
+import EditModal from "../components/EditModal.vue";
 export default {
+  components: { EditModal, },
   data() {
     return {
       email: "", //This makes the default input an empty string
@@ -82,7 +85,7 @@ export default {
     },
 
     deleteItem(id) {
-      this.$store.dispatch("deleteItem");
+      this.$store.dispatch("deleteItem", id);
     },
   },
 };

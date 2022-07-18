@@ -7,14 +7,14 @@
   ></i>
   <div v-if="active" class="mod">
     <form @submit.prevent="editItem(item.id)">
-      <div>ARTIST NAME</div>
+      <div>Item Name</div>
       <input type="text" v-model="item.name" />
-      <div>ART NAME</div>
+      <div>Item Price</div>
       <input type="text" v-model="item.price" />
-      <div>TITLE</div>
+      <div>Item Description</div>
       <input type="text" v-model="item.description" />
-      <div>PRICE</div>
-      <select v-model="item.category">
+      <div>Item Category</div>
+      <select v-model="item.image">
         <option value=""></option>
         <option value=""></option>
         <option value=""></option>
@@ -22,16 +22,8 @@
         <option value=""></option>
         <option value=""></option>
       </select>
-      <div>CATEGORY</div>
-      <select type="text" v-model="item.category">
-        <option value="Abstract">Abstract</option>
-        <option value="Painting">Painting</option>
-        <option value="Sculpture">Sculpture</option>
-        <option value="Drawing">Drawing</option>
-        <option value="Widlife">Widlife</option>
-      </select>
-      <div>DESCRIPTION</div>
-      <input type="text" v-model="piece.description" />
+      <div>Item Image</div>
+      <input type="text" v-model="item.image" />
       <br />
       <button type="submit">Save</button>
       <button type="button" @click="toggleModal">Close</button>
@@ -40,6 +32,7 @@
 </template>
 <script>
 export default {
+
   props: ["item"],
   data() {
     return {
