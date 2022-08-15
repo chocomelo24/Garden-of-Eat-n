@@ -28,14 +28,14 @@
                     <option value="10">10</option>
                   </select>
                 </p> -->
+                <p class="d-flex justify-content- gap-3">
+                  <span>Subtotal: R{{ item.price }}</span>
+                </p>
                 <button @click="deleteFromCart(item.id)" class="btn-area">
                   <i class="fa fa-trash"></i>
                   <span class="btn2">Remove</span>
                 </button>
                 <div class="right-bar">
-                  <p class="d-flex justify-content- gap-3">
-                    <span>Subtotal: R{{ item.price }}</span>
-                  </p>
                   <hr />
                 </div>
               </div>
@@ -125,7 +125,7 @@ body {
   width: 100%;
 }
 .btn-area {
-  position: absolute;
+  /* position: absolute; */
   /* bottom: 20px; */
   right: 20px;
   padding: 10px 25px;

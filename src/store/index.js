@@ -9,8 +9,6 @@ export default createStore({
     user: null,
     cart: [],
     item: null,
-    items: null,
-    user: null,
     asc: true,
   },
   // Mutations are used to update state
